@@ -29,7 +29,7 @@ Run `npm install` and then run `npm start` which will open up a preview of the t
 
 ### Production build
 
-Run `npm install` and then run `npm run build` which will compile Sass, JS, optimized all our assets, and copied the necessary files into the `dist` folder.
+Run `npm run build` which will compile Sass, JS, optimized all our assets, and copied the necessary files into the `dist` folder.
 
 ## Bugs and Issues
 
@@ -39,15 +39,15 @@ Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/fron
 
 * Simple, intuitive, clean code.
 
-* **Bootstrap 4.0.0-beta.2** (served by cdnjs.com CDN) CSS and JS enqueued.
+* **Bootstrap 4.0.0** (served by cdnjs.com CDN) JS enqueued.
 
-* **Popper 1.12.3** (served by cdnjs.com CDN) JS enqueued. Because Bootstrap popovers and tooltips need it.
+* **Popper 1.12.9** (served by cdnjs.com CDN) JS enqueued. Because Bootstrap popovers and tooltips need it.
 
 * **jQuery 3.2.1** enqueued, (served by cdnjs.com CDN),
 
-* **Font Awesome 4.7.0** (served by cdnjs.com CDN) enqueued.
-
 * **Modernizr 2.8.3** (served by cdnjs.com CDN) enqueued.
+
+* **Font Awesome 5.0.4**.
 
 ## Buy me a beer
 

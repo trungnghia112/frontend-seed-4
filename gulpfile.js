@@ -4,12 +4,11 @@ const path = {
   temp: './.tmp',
   dist: './dist',
   coreThirdParty: './third_party',
-  bower: 'bower_components',
   npm: 'node_modules'
 };
 
 const coreScripts = [
-  // path.bower + '/jquery/dist/jquery.min.js',
+  // path.npm + '/jquery/dist/jquery.min.js',
 ];
 
 const gulp = require('gulp');

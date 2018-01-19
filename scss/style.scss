@@ -1,7 +1,7 @@
 /*!--------------------------------------------------------------------------------
 
     Theme Name: Frontend Seed 4
-    Version:    1.0.0
+    Version:    1.1.0
     Author:     trungnghia112 <trungnghia112@gmail.com>
 
 -----------------------------------------------------------------------------------*/
@@ -13,9 +13,22 @@
 //  Content
 //---------------------------------------------------------------------------------*/
 //
+// =Constants
+// --------------------------------------------------
+@import 'custom-variables';
+//
 // =Bootstrap
 // --------------------------------------------------
 @import "custom-bootstrap";
+//
+// =Fontawesome
+// --------------------------------------------------
+@import "../fonts/fontawesome/web-fonts-with-css/scss/fa-regular";
+@import "../fonts/fontawesome/web-fonts-with-css/scss/fa-brands";
+@import "../fonts/fontawesome/web-fonts-with-css/scss/fa-solid";
+@import "../fonts/fontawesome/web-fonts-with-css/scss/fontawesome";
+//
+// =Third parties
 //
 // =Fonts
 // --------------------------------------------------
@@ -31,6 +44,8 @@
 @import "partials/buttons";
 @import "partials/scrollbar-measure";
 @import "partials/modals";
+@import "partials/icons";
+@import "partials/grid";
 //
 // =Modules
 // --------------------------------------------------
