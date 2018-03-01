@@ -1,3 +1,8 @@
+* {
+  min-height: 0; /* Rendering problems using flexbox in Firefox and Chrome 48 */
+  min-width: 0; /* Rendering problems using flexbox in Firefox and Chrome 48 */
+}
+
 .img-full {
   width: 100%;
   height: auto;
