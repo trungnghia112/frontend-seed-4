@@ -1,7 +1,7 @@
 /*!--------------------------------------------------------------------------------
 
     Theme Name: Frontend Seed 4
-    Version:    1.1.0
+    Version:    1.2.0
     Author:     trungnghia112 <trungnghia112@gmail.com>
 
 -----------------------------------------------------------------------------------*/
@@ -13016,6 +13016,13 @@ readers do not read off random characters that represent icons */
 
 .pl0 {
   padding-left: 0px !important;
+}
+
+* {
+  min-height: 0;
+  /* Rendering problems using flexbox in Firefox and Chrome 48 */
+  min-width: 0;
+  /* Rendering problems using flexbox in Firefox and Chrome 48 */
 }
 
 .img-full {

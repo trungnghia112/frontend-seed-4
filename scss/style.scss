@@ -1,7 +1,7 @@
 /*!--------------------------------------------------------------------------------
 
     Theme Name: Frontend Seed 4
-    Version:    1.1.1
+    Version:    1.2.0
     Author:     trungnghia112 <trungnghia112@gmail.com>
 
 -----------------------------------------------------------------------------------*/
@@ -19,51 +19,50 @@
 //
 // =Bootstrap
 // --------------------------------------------------
-@import "custom-bootstrap";
+@import 'custom-bootstrap';
 //
 // =Fontawesome
 // --------------------------------------------------
-@import "../fonts/fontawesome/web-fonts-with-css/scss/fa-regular";
-@import "../fonts/fontawesome/web-fonts-with-css/scss/fa-brands";
-@import "../fonts/fontawesome/web-fonts-with-css/scss/fa-solid";
-@import "../fonts/fontawesome/web-fonts-with-css/scss/fontawesome";
+@import '../fonts/fontawesome/web-fonts-with-css/scss/fa-regular';
+@import '../fonts/fontawesome/web-fonts-with-css/scss/fa-brands';
+@import '../fonts/fontawesome/web-fonts-with-css/scss/fa-solid';
+@import '../fonts/fontawesome/web-fonts-with-css/scss/fontawesome';
 //
 // =Third parties
 //
 // =Fonts
 // --------------------------------------------------
-@import "partials/fonts";
+@import 'partials/fonts';
 //
 // =Global
 // --------------------------------------------------
-@import "general/mixin";
-@import "general/setting";
-@import "partials/constants";
-@import "partials/typography";
-@import "partials/forms";
-@import "partials/buttons";
-@import "partials/scrollbar-measure";
-@import "partials/modals";
-@import "partials/icons";
-@import "partials/grid";
+@import 'general/mixin';
+@import 'general/setting';
+@import 'partials/constants';
+@import 'partials/typography';
+@import 'partials/forms';
+@import 'partials/buttons';
+@import 'partials/scrollbar-measure';
+@import 'partials/modals';
+@import 'partials/icons';
+@import 'partials/grid';
 //
 // =Modules
 // --------------------------------------------------
-@import "modules/IconHoverEffects";
-@import "modules/facebook-responsive";
-@import "modules/list";
+@import 'modules/IconHoverEffects';
+@import 'modules/facebook-responsive';
+@import 'modules/list';
 //
 //
 // =Layout
 // --------------------------------------------------
-@import "layout/header";
-@import "layout/footer";
-@import "layout/content";
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/content';
 //
 // =Third party
 // --------------------------------------------------
 //
 // =Content
 // --------------------------------------------------
-@import "pages/home";
-
+@import 'pages/home';

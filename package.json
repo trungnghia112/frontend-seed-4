@@ -1,6 +1,6 @@
 {
   "name": "frontend-seed-4",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A basic HTML starter template for Bootstrap 4",
   "keywords": [
     "css",
@@ -23,7 +23,9 @@
   },
   "scripts": {
     "start": "gulp serve",
-    "build": "gulp build"
+    "prettier": "prettier ./**/*.{ts,json,md,scss} --write",
+    "clean": "rm -rf ./dist/ && rm -rf ./.tmp/ && rm -rf ./css/",
+    "build": "npm run clean && npm run prettier && gulp build"
   },
   "engines": {
     "node": ">=6.9.0",
@@ -63,7 +65,8 @@
     "gulp-sass": "^3.0.0",
     "gulp-size": "^2.1.0",
     "gulp-sourcemaps": "^2.2.0",
-    "gulp-uglify": "^2.0.0"
+    "gulp-uglify": "^2.0.0",
+    "prettier": "1.11.1"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
