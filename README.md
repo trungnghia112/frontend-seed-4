@@ -54,7 +54,7 @@ Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/fron
 
 * **Modernizr 2.8.3**
 
-* **Font Awesome 5.0.4**
+* **Font Awesome 5.0.13**
 
 * **Prettier 1.11.1** (Opinionated Code Formatter).
 
