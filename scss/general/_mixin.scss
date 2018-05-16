@@ -1,3 +1,5 @@
+@import "flex";
+
 $prefix-for-webkit: true !default;
 $prefix-for-mozilla: true !default;
 $prefix-for-microsoft: true !default;
@@ -57,6 +59,15 @@ $prefix-for-spec: true !default;
 
 @mixin transform-style($style: flat) {
   @include prefixer(transform-style, $style, webkit moz ms o spec);
+}
+
+//
+//Set a pixel font size with rem fallback
+//
+
+@function calculatePx($size) {
+  $pxSize: $size / 1rem;
+  @return $pxSize * 16px;
 }
 
 //
@@ -198,20 +209,6 @@ $retina-suffix: '@2x';
     @include center(false, true);
   }
 }*/
-
-@mixin cacl-width-responsive($width,$grid-gutter-width:0,$other:0) {
-  @media (min-width: $screen-sm-min) {
-    width: $container-sm - $width - $grid-gutter-width - $other;
-  }
-  @media (min-width: $screen-md-min) {
-    width: $container-md - $width - $grid-gutter-width - $other;
-  }
-  @media (min-width: $screen-lg-min) {
-    width: $container-lg - $width - $grid-gutter-width - $other;
-  }
-}
-
-
 
 // --------------------------------------------------------
 // arrows

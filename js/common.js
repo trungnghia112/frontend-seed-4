@@ -15,17 +15,10 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
 (function ($) {
   'use strict';
 
-  // Scroll to top
-  function scrollToTop() {
-    $('.x-toTop').on('click', function (e) {
-      e.preventDefault();
-      $('html, body').animate({
-        scrollTop: 0
-      }, 1000);
-      return false;
-    });
-  }
 
+  /* ==================================================
+  # Get scroll bar width
+  ===================================================*/
   function getBarwidth() {
     // Create the measurement node
     let scrollDiv = document.createElement('div');
@@ -41,13 +34,36 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     return scrollbarWidth;
   }
 
+  /* ==================================================
+  # Smooth Scroll
+  ===================================================*/
+  function scrollToAnchor() {
+    $('.js-scroll-to').on('click', function(event) {
+      var $anchor = $(this);
+      var headerH = '0';
+      $('html, body')
+        .stop()
+        .animate(
+          {
+            scrollTop: $($anchor.attr('href')).offset().top - headerH + 'px'
+          },
+          1000
+        );
+      event.preventDefault();
+    });
+  }
+
   function init() {
-    scrollToTop();
+    scrollToAnchor();
     getBarwidth();
   }
 
-  init();
+  $(document).ready(function() {
+    init();
+  }); // end document ready function
 
+  $(window).on('scroll', function() {
+  });
 
   // if ($('.x-toTop').length) {
   //   var scrollTrigger = 100, // px
@@ -65,4 +81,4 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
   //   });
   // }
 
-})(jQuery);
+})(jQuery); // End jQuery

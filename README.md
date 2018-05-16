@@ -46,15 +46,15 @@ Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/fron
 
 * Simple, intuitive, clean code.
 
-* **Bootstrap 4.0.0** (served by cdnjs.com CDN) JS enqueued.
+* **Bootstrap ^4.1.1**
 
-* **Popper 1.12.9** (served by cdnjs.com CDN) JS enqueued. Because Bootstrap popovers and tooltips need it.
+* **Popper ^1.12.9**(Because Bootstrap popovers and tooltips need it)
 
-* **jQuery 3.2.1** enqueued, (served by cdnjs.com CDN),
+* **jQuery ^3.2.1**
 
-* **Modernizr 2.8.3** (served by cdnjs.com CDN) enqueued.
+* **Modernizr 2.8.3**
 
-* **Font Awesome 5.0.4**.
+* **Font Awesome 5.0.4**
 
 * **Prettier 1.11.1** (Opinionated Code Formatter).
 
