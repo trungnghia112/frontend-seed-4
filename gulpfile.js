@@ -1,202 +1,176 @@
-const path = {
-  base: './',
-  html: './',
-  temp: './.tmp',
-  dist: './dist',
-  coreThirdParty: './third_party',
-  npm: 'node_modules'
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+const imagemin = require('gulp-imagemin');
+const newer = require('gulp-newer');
+const del = require('del');
+const plumber = require('gulp-plumber');
+const browserSync = require('browser-sync').create();
+const size = require('gulp-size');
+
+const paths = {
+  html: {
+    src: './**/*.html',
+    dest: '.'
+  },
+  styles: {
+    src: 'scss/**/*.scss',
+    dest: 'css/'
+  },
+  stylesMin: {
+    src: 'scss/**/*.scss',
+    dest: 'dist/'
+  },
+  scripts: {
+    src: 'js/**/*.js',
+    dest: 'dist/'
+  },
+  scriptsCore: {
+    src: ['third_party/modernizr.min.js'],
+    dest: 'dist/'
+  },
+  images: {
+    src: 'images_temp/**/*.{jpg,jpeg,png}',
+    dest: 'images/'
+  }
 };
 
-const coreScripts = [
-  // path.npm + '/jquery/dist/jquery.min.js',
-];
-
-const gulp = require('gulp');
-const gulpLoadPlugins = require('gulp-load-plugins');
-const browserSync = require('browser-sync');
-const del = require('del');
-
-const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
-
-//*** SASS compiler task
-gulp.task('styles', () => {
-  return (
-    gulp
-      .src(path.base + '/scss/*.scss')
-      .pipe($.plumber())
-      .pipe($.sourcemaps.init())
-      .pipe(
-        $.sass
-          .sync({
-            outputStyle: 'expanded',
-            precision: 10,
-            includePaths: ['.']
-          })
-          .on('error', $.sass.logError)
-      )
-      .pipe(
-        $.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']})
-      )
-      .pipe($.sourcemaps.write('.'))
-      //.pipe(gulp.dest(path.temp + '/css'))
-      .pipe(gulp.dest(path.base + '/css'))
-      .pipe(reload({stream: true}))
-  );
-});
-
-//*** SCRIPTS compiler task
-gulp.task('scripts', () => {
-  return gulp
-    .src(path.base + '/js/**/*.js')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.babel())
-    .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest(path.temp + '/js'))
-    .pipe(reload({stream: true}));
-});
-
-//*** CORE SCRIPTS compiler task
-gulp.task('coreScripts', () => {
-  return gulp
-    .src(coreScripts)
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.babel())
-    .pipe($.concat('core.js'))
-    .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest(path.temp + '/third_party'))
-    .pipe(reload({stream: true}));
-});
-
-//*** LINT compiler task
-function lint(files, options) {
-  return gulp
-    .src(files)
-    .pipe(reload({stream: true, once: true}))
-    .pipe($.eslint(options))
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
+/* Not all tasks need to use streams, a gulpfile is just another node program
+ * and you can use all packages available on npm, but it must return either a
+ * Promise, a Stream or take a callback and call it
+ */
+function clean() {
+  // You can use multiple globbing patterns as you would with `gulp.src`,
+  // for example if you are using del 2.0 or above, return its promise
+  return del(['dist', 'css']);
 }
 
-//*** Finding common mistakes in scripts
-gulp.task('lint', () => {
-  return lint(path.base + '/js/**/*.js', {
-    fix: true
-  }).pipe(gulp.dest(path.base + '/js'));
-});
-
-//*** CSS minify task
-gulp.task('minify:css', ['styles'], () => {
-  //return gulp.src([path.temp + '/css/*.css', '!' + path.temp + '/css/*.min.css'])
+/*
+ * Define our tasks using plain functions
+ */
+function styles() {
   return gulp
-    .src([path.base + '/css/*.css', '!' + path.base + '/css/*.min.css'])
-    .pipe($.cssnano({safe: true, autoprefixer: false}))
-    .pipe($.rename('app.min.css'))
-    .pipe(gulp.dest(path.dist));
-});
+    .src(paths.styles.src)
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'expanded' }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(browserSync.stream());
+}
 
-//*** JS minify task
-gulp.task('minify:js', ['scripts'], () => {
+/*
+ * Define our tasks using plain functions
+ */
+function stylesMin() {
   return gulp
-    .src([path.temp + '/js/*.js', '!' + path.temp + '/js/*.min.js'])
-    .pipe($.uglify())
-    .pipe($.rename('app.min.js'))
-    .pipe(gulp.dest(path.dist));
-});
-
-//*** CORE JS minify task
-gulp.task('minify:corejs', ['coreScripts'], () => {
-  return gulp
-    .src([
-      path.temp + '/third_party/*.js',
-      '!' + path.temp + '/third_party/*.min.js'
-    ])
-    .pipe($.uglify())
-    .pipe($.rename('core.min.js'))
-    .pipe(gulp.dest(path.dist));
-});
-
-//*** IMAGES minify task
-gulp.task('minify:images', () => {
-  return gulp
-    .src(path.base + '/images_temp/**/*')
+    .src(paths.stylesMin.src)
+    .pipe(plumber())
+    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(cleanCSS()) // pass in options to the stream
     .pipe(
-      $.cache(
-        $.imagemin({
-          progressive: true,
-          interlaced: true,
-          // don't remove IDs from SVGs, they are often used
-          // as hooks for embedding and styling
-          svgoPlugins: [{cleanupIDs: false}]
-        })
-      )
+      rename({
+        basename: 'app',
+        suffix: '.min'
+      })
     )
-    .pipe(gulp.dest(path.base + '/images'));
-});
+    .pipe(size())
+    .pipe(gulp.dest(paths.stylesMin.dest))
+    .pipe(browserSync.stream());
+}
 
-//*** CSS & JS & CORE JS & IMAGES minify task
-gulp.task(
-  'minify',
-  ['minify:css', 'minify:js', 'minify:corejs', 'minify:images'],
-  () => {
-    return gulp
-      .src(path.dist + '/**/*')
-      .pipe($.size({title: 'dist', gzip: false}));
-  }
+function scripts() {
+  return gulp
+    .src(paths.scripts.src, { sourcemaps: true })
+    .pipe(plumber())
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(concat('app.min.js'))
+    .pipe(size())
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(browserSync.stream());
+}
+
+function scriptsCore() {
+  return gulp
+    .src(paths.scriptsCore.src, { sourcemaps: false })
+    .pipe(plumber())
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(concat('core.min.js'))
+    .pipe(size())
+    .pipe(gulp.dest(paths.scriptsCore.dest))
+    .pipe(browserSync.stream());
+}
+
+function images() {
+  return gulp
+    .src(paths.images.src)
+    .pipe(plumber())
+    .pipe(newer(paths.images.dest)) // pass through newer images only
+    .pipe(imagemin({ optimizationLevel: 5 }))
+    .pipe(size())
+    .pipe(gulp.dest(paths.images.dest))
+    .pipe(browserSync.stream());
+}
+
+function serve() {
+  browserSync.init({
+    notify: true,
+    port: 9000,
+    server: '.'
+  });
+  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.scriptsCore.src, scriptsCore);
+  gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.stylesMin.src, stylesMin);
+  gulp.watch(paths.images.src, images);
+  gulp.watch(paths.html.src).on('change', browserSync.reload);
+}
+
+function watch() {
+  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.scriptsCore.src, scriptsCore);
+  gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.stylesMin.src, stylesMin);
+  gulp.watch(paths.images.src, images);
+}
+
+/*
+ * You can use CommonJS `exports` module notation to declare tasks
+ */
+exports.clean = clean;
+exports.styles = styles;
+exports.stylesMin = stylesMin;
+exports.scripts = scripts;
+exports.scriptsCore = scriptsCore;
+exports.images = images;
+exports.watch = watch;
+exports.serve = serve;
+
+/*
+ * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
+ */
+const build = gulp.series(
+  clean,
+  gulp.parallel(styles, stylesMin, scripts, scriptsCore, images)
 );
 
-//*** CLEAN compiler task
-gulp.task('clean', del.bind(null, [path.temp, path.dist], {force: true}));
+/*
+ * You can still use `gulp.task` to expose tasks
+ */
+gulp.task('clean', clean);
+/*
+ * You can still use `gulp.task` to expose tasks
+ */
+gulp.task('build', build);
 
-//*** WATCH compiler task
-gulp.task('watch', () => {
-  gulp
-    .watch([
-      path.html + '/*.html',
-      path.dist + '/**/*',
-      path.base + '/fonts/**/*',
-      path.base + '/images/**/*'
-    ])
-    .on('change', reload);
-
-  gulp.watch(path.base + '/scss/**/*.scss', ['minify:css']);
-  gulp.watch(path.base + '/third_party/**/*.js', ['minify:corejs']);
-  gulp.watch(path.base + '/js/**/*.js', ['minify:js']);
-  gulp.watch(path.base + '/images_temp/**/*', ['minify:images']);
-});
-
-//*** SERVE compiler task
-gulp.task('serve', ['minify', 'watch'], () => {
-  browserSync({
-    notify: true,
-    port: 9000,
-    server: {
-      baseDir: [path.html, path.base]
-    }
-  });
-});
-
-//*** SERVE compiler task
-gulp.task('serveLite', ['watch'], () => {
-  browserSync({
-    notify: true,
-    port: 9000,
-    server: {
-      baseDir: [path.html, path.base]
-    }
-  });
-});
-
-//*** BUILD compiler task
-gulp.task('build', ['lint', 'minify'], () => {
-  return gulp
-    .src(path.dist + '/**/*')
-    .pipe($.size({title: 'build', gzip: true}));
-});
-
-//*** DEFAULT compiler task
-gulp.task('default', ['clean'], () => {
-  gulp.start('build');
-});
+/*
+ * Define default task that can be called by just running `gulp` from cli
+ */
+gulp.task('default', build);
