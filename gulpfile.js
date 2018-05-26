@@ -72,7 +72,7 @@ function stylesMin() {
     .src(paths.stylesMin.src)
     .pipe(plumber())
     .pipe(sass({ outputStyle: 'compressed' }))
-    .pipe(cleanCSS()) // pass in options to the stream
+    // .pipe(cleanCSS()) // pass in options to the stream
     .pipe(
       rename({
         basename: 'app',
