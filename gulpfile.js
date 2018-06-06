@@ -56,7 +56,6 @@ function clean() {
 function styles() {
   return gulp
     .src(paths.styles.src)
-    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(sourcemaps.write('.'))
@@ -70,7 +69,6 @@ function styles() {
 function stylesMin() {
   return gulp
     .src(paths.stylesMin.src)
-    .pipe(plumber())
     .pipe(sass({ outputStyle: 'compressed' }))
     // .pipe(cleanCSS()) // pass in options to the stream
     .pipe(
