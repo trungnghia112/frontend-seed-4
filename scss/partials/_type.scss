@@ -1,0 +1,19 @@
+.list-inline-dot {
+  > li {
+    &:not(:last-child) {
+      &:after {
+        content: '';
+        width: 2px;
+        height: 2px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: #90949c;
+        margin-left: $list-inline-padding;
+        margin-right: -$list-inline-padding;
+      }
+    }
+  }
+}

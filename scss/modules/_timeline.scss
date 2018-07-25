@@ -1,0 +1,117 @@
+.timeline-wrap {
+  width: 851px;
+  @include font-size(14px);
+  .timeline-top {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .timeline-cover {
+    position: relative;
+  }
+  .cover-img {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 1px solid rgba(0, 0, 0, .25);
+      border-top-color: rgba(0, 0, 0, .1);
+      background: linear-gradient(rgba(0, 0, 0, 0) 71%, rgba(0, 0, 0, .53));
+    }
+  }
+  .timeline-nav {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #d3d6db;
+    padding-left: 210px;
+    @include border-bottom-radius(3px);
+  }
+  .timeline-avatar {
+    position: absolute;
+    left: 15px;
+    top: -143px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .timeline-avatar-img {
+    width: 168px;
+    border: 4px solid #FFF;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .timeline-navbar {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include flexbox;
+    > li {
+      > a {
+        border-left: 1px solid #e9eaed;
+        border-right: 1px solid #e9eaed;
+        margin-right: -1px;
+        display: block;
+        padding: 11px 17px;
+        font-weight: bold;
+        text-decoration: none;
+        position: relative;
+        &.active {
+          color: #4b4f56;
+          &:before {
+            content: '';
+            @include center(true, false);
+            bottom: 0;
+            @include make-arrow('top', #cdcdcd, 7px, 7px)
+          }
+          &:after {
+            content: '';
+            @include center(true, false);
+            bottom: -1px;
+            @include make-arrow('top', $body-bg, 7px, 7px)
+          }
+        }
+      }
+    }
+  }
+  .timeline-top-action {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    .btn {
+      border-width: 0;
+    }
+    .btn-group {
+      .btn {
+        &:not(:first-child) {
+          border-left-width: 1px;
+        }
+        &:not(:last-child) {
+          border-right-width: 1px;
+        }
+      }
+      & + .btn-group {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+.timeline-container {
+  @include flexbox;
+  width: 100%;
+  .timeline-aside {
+    width: 323px;
+    margin-right: 10px;
+  }
+
+  .timeline-content {
+    @include flex(1);
+  }
+}
