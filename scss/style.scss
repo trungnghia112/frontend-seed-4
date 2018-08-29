@@ -1,3 +1,17 @@
+/*!--------------------------------------------------------------------------------
+
+    Theme Name: Frontend Seed 4
+    Version:    1.4.4
+    Author:     trungnghia112 <trungnghia112@gmail.com>
+
+-----------------------------------------------------------------------------------*/
+//  Bootstrap
+//  Fonts
+//  Global
+//  Third party
+//  Layout
+//  Content
+//---------------------------------------------------------------------------------*/
 //
 // =Constants
 // --------------------------------------------------
@@ -9,10 +23,10 @@
 //
 // =Fontawesome
 // --------------------------------------------------
-//@import '../fonts/fontawesome/web-fonts-with-css/scss/fa-regular';
-//@import '../fonts/fontawesome/web-fonts-with-css/scss/fa-brands';
-//@import '../fonts/fontawesome/web-fonts-with-css/scss/fa-solid';
-//@import '../fonts/fontawesome/web-fonts-with-css/scss/fontawesome';
+@import '../fonts/fontawesome/web-fonts-with-css/scss/fa-regular';
+@import '../fonts/fontawesome/web-fonts-with-css/scss/fa-brands';
+@import '../fonts/fontawesome/web-fonts-with-css/scss/fa-solid';
+@import '../fonts/fontawesome/web-fonts-with-css/scss/fontawesome';
 //
 // =Third parties
 //
@@ -27,23 +41,17 @@
 @import 'partials/constants';
 @import 'partials/typography';
 @import 'partials/forms';
-@import 'partials/media';
 @import 'partials/buttons';
 @import 'partials/scrollbar-measure';
 @import 'partials/modals';
 @import 'partials/icons';
 @import 'partials/grid';
-@import 'partials/card';
-@import 'partials/type';
-@import 'partials/dropdown';
 //
 // =Modules
 // --------------------------------------------------
 @import 'modules/IconHoverEffects';
 @import 'modules/facebook-responsive';
 @import 'modules/list';
-@import 'modules/topbar';
-@import 'modules/timeline';
 //
 // =Layout
 // --------------------------------------------------
