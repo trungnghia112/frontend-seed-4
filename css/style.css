@@ -1,7 +1,7 @@
 @import url(../node_modules/primeicons/primeicons.css);
 @import url(../node_modules/primeng/resources/primeng.min.css);
 /*!
- * Bootstrap v4.1.1 (https://getbootstrap.com/)
+ * Bootstrap v4.1.2 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -33,7 +33,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -62,7 +62,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -211,7 +211,7 @@ img {
   border-style: none;
 }
 
-svg:not(:root) {
+svg {
   overflow: hidden;
   vertical-align: middle;
 }
@@ -1368,7 +1368,6 @@ pre code {
 
 .table, .fb-table table {
   width: 100%;
-  max-width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
 }
@@ -1676,6 +1675,7 @@ pre code {
 .form-control, .ui-inputtext {
   display: block;
   width: 100%;
+  height: calc(2rem + 2px);
   padding: 0.3438rem 0.5rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -1715,10 +1715,6 @@ pre code {
 .form-control:disabled, .ui-inputtext:disabled, .form-control[readonly], .ui-inputtext[readonly] {
   background-color: #e9ecef;
   opacity: 1;
-}
-
-select.form-control:not([size]):not([multiple]), select.ui-inputtext:not([size]):not([multiple]) {
-  height: calc(2rem + 2px);
 }
 
 select.form-control:focus::-ms-value, select.ui-inputtext:focus::-ms-value {
@@ -1767,55 +1763,33 @@ select.form-control:focus::-ms-value, select.ui-inputtext:focus::-ms-value {
   border-width: 1px 0;
 }
 
-.form-control-plaintext.form-control-sm, .input-group-sm > .form-control-plaintext.form-control, .input-group-sm > .form-control-plaintext.ui-inputtext,
-.input-group-sm > .input-group-prepend > .form-control-plaintext.input-group-text,
-.input-group-sm > .input-group-append > .form-control-plaintext.input-group-text,
-.input-group-sm > .input-group-prepend > .form-control-plaintext.btn, .input-group-sm > .input-group-prepend > .form-control-plaintext.ui-paginator-element,
-.input-group-sm > .input-group-append > .form-control-plaintext.btn, .input-group-sm > .input-group-append > .form-control-plaintext.ui-paginator-element, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .input-group-lg > .form-control-plaintext.ui-inputtext,
-.input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
-.input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
-.input-group-lg > .input-group-prepend > .form-control-plaintext.btn, .input-group-lg > .input-group-prepend > .form-control-plaintext.ui-paginator-element,
-.input-group-lg > .input-group-append > .form-control-plaintext.btn, .input-group-lg > .input-group-append > .form-control-plaintext.ui-paginator-element {
+.form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {
   padding-right: 0;
   padding-left: 0;
 }
 
-.form-control-sm, .input-group-sm > .form-control, .input-group-sm > .ui-inputtext,
-.input-group-sm > .input-group-prepend > .input-group-text,
-.input-group-sm > .input-group-append > .input-group-text,
-.input-group-sm > .input-group-prepend > .btn, .input-group-sm > .input-group-prepend > .ui-paginator-element,
-.input-group-sm > .input-group-append > .btn, .input-group-sm > .input-group-append > .ui-paginator-element {
+.form-control-sm {
+  height: calc(1.5625rem + 2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0;
 }
 
-select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > select.ui-inputtext:not([size]):not([multiple]),
-.input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
-.input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]), .input-group-sm > .input-group-prepend > select.ui-paginator-element:not([size]):not([multiple]),
-.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]), .input-group-sm > .input-group-append > select.ui-paginator-element:not([size]):not([multiple]) {
-  height: calc(1.5625rem + 2px);
-}
-
-.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .ui-inputtext,
-.input-group-lg > .input-group-prepend > .input-group-text,
-.input-group-lg > .input-group-append > .input-group-text,
-.input-group-lg > .input-group-prepend > .btn, .input-group-lg > .input-group-prepend > .ui-paginator-element,
-.input-group-lg > .input-group-append > .btn, .input-group-lg > .input-group-append > .ui-paginator-element {
+.form-control-lg {
+  height: calc(2.625rem + 2px);
   padding: 0.313rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 5px;
 }
 
-select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .input-group-lg > select.ui-inputtext:not([size]):not([multiple]),
-.input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
-.input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]), .input-group-lg > .input-group-prepend > select.ui-paginator-element:not([size]):not([multiple]),
-.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]), .input-group-lg > .input-group-append > select.ui-paginator-element:not([size]):not([multiple]) {
-  height: calc(2.625rem + 2px);
+select.form-control[size], select.ui-inputtext[size], select.form-control[multiple], select.ui-inputtext[multiple] {
+  height: auto;
+}
+
+textarea.form-control, textarea.ui-inputtext {
+  height: auto;
 }
 
 .form-group {
@@ -1888,13 +1862,13 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   z-index: 5;
   display: none;
   max-width: 100%;
-  padding: .5rem;
+  padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: .875rem;
-  line-height: 1;
+  font-size: 0.875rem;
+  line-height: 1.5;
   color: #fff;
-  background-color: rgba(40, 167, 69, 0.8);
-  border-radius: .2rem;
+  background-color: rgba(40, 167, 69, 0.9);
+  border-radius: 2px;
 }
 
 .was-validated .form-control:valid, .was-validated .ui-inputtext:valid, .form-control.is-valid, .is-valid.ui-inputtext, .was-validated .custom-select:valid, .was-validated .ui-multiselect:valid,
@@ -1966,7 +1940,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border-color: #28a745;
 }
 
-.was-validated .custom-file-input:valid ~ .custom-file-label::before, .custom-file-input.is-valid ~ .custom-file-label::before {
+.was-validated .custom-file-input:valid ~ .custom-file-label::after, .custom-file-input.is-valid ~ .custom-file-label::after {
   border-color: inherit;
 }
 
@@ -1994,13 +1968,13 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   z-index: 5;
   display: none;
   max-width: 100%;
-  padding: .5rem;
+  padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: .875rem;
-  line-height: 1;
+  font-size: 0.875rem;
+  line-height: 1.5;
   color: #fff;
-  background-color: rgba(220, 53, 69, 0.8);
-  border-radius: .2rem;
+  background-color: rgba(220, 53, 69, 0.9);
+  border-radius: 2px;
 }
 
 .was-validated .form-control:invalid, .was-validated .ui-inputtext:invalid, .form-control.is-invalid, .is-invalid.ui-inputtext, .was-validated .custom-select:invalid, .was-validated .ui-multiselect:invalid,
@@ -2072,7 +2046,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border-color: #dc3545;
 }
 
-.was-validated .custom-file-input:invalid ~ .custom-file-label::before, .custom-file-input.is-invalid ~ .custom-file-label::before {
+.was-validated .custom-file-input:invalid ~ .custom-file-label::after, .custom-file-input.is-invalid ~ .custom-file-label::after {
   border-color: inherit;
 }
 
@@ -2185,7 +2159,6 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .btn:not(:disabled):not(.disabled):active, .ui-paginator-element:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .ui-paginator-element:not(:disabled):not(.disabled).active {
-  background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
@@ -3256,6 +3229,10 @@ input[type="button"].btn-block {
   z-index: 3;
 }
 
+.input-group > .custom-file .custom-file-input:focus {
+  z-index: 4;
+}
+
 .input-group > .form-control:not(:last-child), .input-group > .ui-inputtext:not(:last-child),
 .input-group > .custom-select:not(:last-child),
 .input-group > .ui-multiselect:not(:last-child) {
@@ -3343,6 +3320,34 @@ input[type="button"].btn-block {
 .input-group-text input[type="radio"],
 .input-group-text input[type="checkbox"] {
   margin-top: 0;
+}
+
+.input-group-lg > .form-control, .input-group-lg > .ui-inputtext,
+.input-group-lg > .input-group-prepend > .input-group-text,
+.input-group-lg > .input-group-append > .input-group-text,
+.input-group-lg > .input-group-prepend > .btn,
+.input-group-lg > .input-group-prepend > .ui-paginator-element,
+.input-group-lg > .input-group-append > .btn,
+.input-group-lg > .input-group-append > .ui-paginator-element {
+  height: calc(2.625rem + 2px);
+  padding: 0.313rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 5px;
+}
+
+.input-group-sm > .form-control, .input-group-sm > .ui-inputtext,
+.input-group-sm > .input-group-prepend > .input-group-text,
+.input-group-sm > .input-group-append > .input-group-text,
+.input-group-sm > .input-group-prepend > .btn,
+.input-group-sm > .input-group-prepend > .ui-paginator-element,
+.input-group-sm > .input-group-append > .btn,
+.input-group-sm > .input-group-append > .ui-paginator-element {
+  height: calc(1.5625rem + 2px);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0;
 }
 
 .input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .ui-paginator-element,
@@ -3492,22 +3497,22 @@ input[type="button"].btn-block {
   display: inline-block;
   width: 100%;
   height: calc(2rem + 2px);
-  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  padding: 0.125rem 1.75rem 0.125rem 0.75rem;
   line-height: 1.5;
   color: #495057;
   vertical-align: middle;
-  background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+  background: #f6f7f9 url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
   background-size: 8px 10px;
   border: 1px solid #ced4da;
   border-radius: 2px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  box-shadow: none;
   appearance: none;
 }
 
 .custom-select:focus, .ui-multiselect:focus {
   border-color: #9aafda;
   outline: 0;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(154, 175, 218, 0.5);
+  box-shadow: none, 0 0 0 0.2rem rgba(154, 175, 218, 0.5);
 }
 
 .custom-select:focus::-ms-value, .ui-multiselect:focus::-ms-value {
@@ -3532,15 +3537,15 @@ input[type="button"].btn-block {
 
 .custom-select-sm {
   height: calc(1.5625rem + 2px);
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
   font-size: 75%;
 }
 
 .custom-select-lg {
   height: calc(2.625rem + 2px);
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
   font-size: 125%;
 }
 
@@ -3622,6 +3627,18 @@ input[type="button"].btn-block {
   outline: none;
 }
 
+.custom-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px #e9ebee, 0 0 0 0.2rem rgba(66, 103, 178, 0.25);
+}
+
+.custom-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 1px #e9ebee, 0 0 0 0.2rem rgba(66, 103, 178, 0.25);
+}
+
+.custom-range:focus::-ms-thumb {
+  box-shadow: 0 0 0 1px #e9ebee, 0 0 0 0.2rem rgba(66, 103, 178, 0.25);
+}
+
 .custom-range::-moz-focus-outer {
   border: 0;
 }
@@ -3642,11 +3659,6 @@ input[type="button"].btn-block {
   .custom-range::-webkit-slider-thumb {
     transition: none;
   }
-}
-
-.custom-range::-webkit-slider-thumb:focus {
-  outline: none;
-  box-shadow: 0 0 0 1px #e9ebee, 0 0 0 0.2rem rgba(66, 103, 178, 0.25);
 }
 
 .custom-range::-webkit-slider-thumb:active {
@@ -3681,11 +3693,6 @@ input[type="button"].btn-block {
   }
 }
 
-.custom-range::-moz-range-thumb:focus {
-  outline: none;
-  box-shadow: 0 0 0 1px #e9ebee, 0 0 0 0.2rem rgba(66, 103, 178, 0.25);
-}
-
 .custom-range::-moz-range-thumb:active {
   background-color: #bfcce7;
 }
@@ -3704,6 +3711,9 @@ input[type="button"].btn-block {
 .custom-range::-ms-thumb {
   width: 1rem;
   height: 1rem;
+  margin-top: 0;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
   background-color: #4267b2;
   border: 0;
   border-radius: 1rem;
@@ -3716,11 +3726,6 @@ input[type="button"].btn-block {
   .custom-range::-ms-thumb {
     transition: none;
   }
-}
-
-.custom-range::-ms-thumb:focus {
-  outline: none;
-  box-shadow: 0 0 0 1px #e9ebee, 0 0 0 0.2rem rgba(66, 103, 178, 0.25);
 }
 
 .custom-range::-ms-thumb:active {
@@ -4524,6 +4529,11 @@ input[type="button"].btn-block {
   overflow: hidden;
 }
 
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -4534,11 +4544,6 @@ input[type="button"].btn-block {
   display: none;
   overflow: hidden;
   outline: 0;
-}
-
-.modal-open .modal {
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .modal-dialog {
@@ -4567,6 +4572,12 @@ input[type="button"].btn-block {
   display: flex;
   align-items: center;
   min-height: calc(100% - (0.5rem * 2));
+}
+
+.modal-dialog-centered::before {
+  display: block;
+  height: calc(100vh - (0.5rem * 2));
+  content: "";
 }
 
 .modal-content {
@@ -4658,6 +4669,9 @@ input[type="button"].btn-block {
   }
   .modal-dialog-centered {
     min-height: calc(100% - (1.75rem * 2));
+  }
+  .modal-dialog-centered::before {
+    height: calc(100vh - (1.75rem * 2));
   }
   .modal-content {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
@@ -8040,11 +8054,7 @@ small,
   color: #bec2c9;
 }
 
-.form-control.form-control-sm, .input-group-sm > .form-control, .input-group-sm > .ui-inputtext,
-.input-group-sm > .input-group-prepend > .form-control.input-group-text, .input-group-sm > .input-group-prepend > .input-group-text.ui-inputtext,
-.input-group-sm > .input-group-append > .form-control.input-group-text, .input-group-sm > .input-group-append > .input-group-text.ui-inputtext,
-.input-group-sm > .input-group-prepend > .form-control.btn, .input-group-sm > .input-group-prepend > .form-control.ui-paginator-element, .input-group-sm > .input-group-prepend > .ui-paginator-element.ui-inputtext, .input-group-sm > .input-group-prepend > .btn.ui-inputtext,
-.input-group-sm > .input-group-append > .form-control.btn, .input-group-sm > .input-group-append > .form-control.ui-paginator-element, .input-group-sm > .input-group-append > .ui-paginator-element.ui-inputtext, .input-group-sm > .input-group-append > .btn.ui-inputtext, .form-control-sm.ui-inputtext {
+.form-control.form-control-sm, .form-control-sm.ui-inputtext {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1.2;
@@ -8055,11 +8065,7 @@ small,
   font-size: 0.75rem;
 }
 
-.form-control.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .ui-inputtext,
-.input-group-lg > .input-group-prepend > .form-control.input-group-text, .input-group-lg > .input-group-prepend > .input-group-text.ui-inputtext,
-.input-group-lg > .input-group-append > .form-control.input-group-text, .input-group-lg > .input-group-append > .input-group-text.ui-inputtext,
-.input-group-lg > .input-group-prepend > .form-control.btn, .input-group-lg > .input-group-prepend > .form-control.ui-paginator-element, .input-group-lg > .input-group-prepend > .ui-paginator-element.ui-inputtext, .input-group-lg > .input-group-prepend > .btn.ui-inputtext,
-.input-group-lg > .input-group-append > .form-control.btn, .input-group-lg > .input-group-append > .form-control.ui-paginator-element, .input-group-lg > .input-group-append > .ui-paginator-element.ui-inputtext, .input-group-lg > .input-group-append > .btn.ui-inputtext, .form-control-lg.ui-inputtext {
+.form-control.form-control-lg, .form-control-lg.ui-inputtext {
   font-size: 18px;
   font-size: 1.125rem;
 }
@@ -9259,6 +9265,20 @@ small,
   }
 }
 
+.i-status {
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #90949c;
+}
+
+.i-status.online {
+  background-color: #42b72a;
+}
+
 .sm-gutters {
   margin-right: -10px;
   margin-left: -10px;
@@ -9363,6 +9383,10 @@ small,
 
 .card .card-body .card-other a:hover, .card .card-body .card-other a:focus, .card .card-body .card-other a:active {
   color: #365899;
+}
+
+.card .card-text-post br {
+  line-height: 2;
 }
 
 .card .card-bar {
@@ -9986,6 +10010,10 @@ small,
   width: 80px;
 }
 
+.card-form-friends .custom-select-auto {
+  width: 120px;
+}
+
 .card-form-friends .ui-multiselect {
   width: 200px;
 }
@@ -10305,9 +10333,14 @@ Content
   border-radius: 2px;
 }
 
-.ui-state-highlight, .fb-table.fb-table-striped table tbody tr:nth-of-type(even).ui-state-highlight {
+.ui-state-highlight,
+.fb-table.fb-table-striped table tbody tr:nth-of-type(even).ui-state-highlight {
   background-color: #577fbc;
   color: #ffffff;
+}
+
+.fb-table.fb-table-striped table thead th.ui-state-highlight {
+  color: #4080ff;
 }
 
 .ui-paginator-element.ui-state-active {
@@ -10407,6 +10440,7 @@ Content
   align-items: center;
   margin: 0;
   border-bottom: 1px solid #ced4da;
+  background-color: #f6f7f9;
 }
 
 .ui-multiselect .ui-multiselect-header .ui-multiselect-filter-container {
@@ -10479,6 +10513,41 @@ Content
 
 .ui-slider .ui-slider-range {
   background: #4080ff;
+}
+
+p-sorticon a {
+  color: #4080ff;
+  text-decoration: none;
+}
+
+p-sorticon .ui-sortable-column-icon {
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+.ui-autocomplete {
+  display: block;
+}
+
+.ui-autocomplete .ui-autocomplete-panel {
+  background-color: #fff;
+}
+
+.ui-autocomplete .ui-autocomplete-input-token {
+  display: block;
+}
+
+.ui-autocomplete .ui-autocomplete-input-token input {
+  width: 100%;
+}
+
+.ui-autocomplete .ui-autocomplete-token + .ui-autocomplete-input-token {
+  display: inline-block;
+}
+
+.ui-autocomplete .ui-autocomplete-token + .ui-autocomplete-input-token input {
+  width: auto;
 }
 
 .topbar {
