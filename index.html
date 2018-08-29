@@ -40,19 +40,6 @@
   <meta name="twitter:site" content="">
   <meta name="twitter:image" content="">
   <meta name="twitter:creator" content="">
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "url": "",
-    "name": "",
-    "contactPoint": {
-      "@type": "",
-      "telephone": "",
-      "contactType": ""
-    }
-  }
-  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
   <!-- App CSS -->
@@ -64,9 +51,767 @@
 
 <div class="wrapper" id="site_wrapper">
   <header class="header" id="header">
+    <div class="topbar">
+      <div class="container-fluid container-content">
+        <div class="topbar-left">
+          <a href="index.html" class="logo">
+            <i class="icon-24-facebook"></i>
+          </a>
+          <div class="input-group-search">
+            <div class="input-group input-group-sm ">
+              <input type="text" class="form-control" placeholder="Search">
+              <div class="input-group-append">
+                <button class="btn btn-default" type="button">
+                  <i class="icon-16-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <ul class="topbar-nav">
+            <li class="topbar-nav-item">
+              <div class="media-user media-user-xs">
+                <div class="media-user-img">
+                  <img src="/dummy/avatar.png" alt="">
+                </div>
+                <div class="media-user-body">
+                  <p><a class="name" href="#">Hóng</a></p>
+                </div>
+              </div>
+            </li>
+            <li class="topbar-nav-item">
+              <a class="topbar-nav-link" href="#">Home</a>
+            </li>
+            <li class="topbar-nav-item">
+              <a class="topbar-nav-icon" href="#"><i class="icon-24-friend-requests"></i></a>
+              <a class="topbar-nav-icon" href="#"><i class="icon-24-messages"></i></a>
+              <a class="topbar-nav-icon" href="#"><i class="icon-24-notifications"></i></a>
+            </li>
+            <li class="topbar-nav-item">
+              <a class="topbar-nav-icon" href="#"><i class="icon-24-quick-help"></i></a>
+              <a class="topbar-nav-icon" href="#"><i class="icon-24-caret-down"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
   <main class="main" id="main">
-    <h1>Hello, world!</h1>
+    <div class="container-fluid container-content">
+      <div class="main-left">
+        <div class="aside-nav">
+          <div class="nav-list">
+            <ul class="menu-list">
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <img class="rounded-circle" src="/dummy/avatar.png" alt="">
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Jacob Edward</a>
+                  </div>
+                  <div class="menu-action">
+                    <a href="#"><i class="icon-20-ellipsis"></i></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul class="menu-list">
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-new-feed"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">News Feed</a>
+                  </div>
+                  <div class="menu-action">
+                    <a href="#"><i class="icon-20-ellipsis"></i></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-messenger"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Messenger</a>
+                  </div>
+                  <div class="menu-action">
+                    <a href="#"><i class="icon-20-ellipsis"></i></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-list">
+            <div class="menu-header">
+              <a class="menu-edit" href="#">Edit</a>
+              <h4 class="menu-title">Shortcuts</h4>
+            </div>
+            <ul class="menu-list">
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <img class="rounded-circle" src="/dummy/avatar.png" alt="">
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Jacob Edward</a>
+                  </div>
+                  <div class="menu-action">
+                    <a href="#"><i class="icon-20-ellipsis"></i></a>
+                    <span>20+</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <img class="rounded-circle" src="/dummy/avatar.png" alt="">
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Jacob Edward</a>
+                  </div>
+                  <div class="menu-action">
+                    <a href="#"><i class="icon-20-ellipsis"></i></a>
+                    <span>20+</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-list">
+            <div class="menu-header">
+              <a class="menu-edit" href="#">Edit</a>
+              <h4 class="menu-title">Explore</h4>
+            </div>
+            <ul class="menu-list">
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-events"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Events</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-groups"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Groups</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-pages"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Pages</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-memories"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Memories</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-live_video"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Live Video</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-friend_lists"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Friend Lists</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-saved"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Saved</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-pages_feed"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Pages Feed</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-manage_apps"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Manage Apps</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-insights"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Insights</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-games"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Games</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-photos"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Photos</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-ads_manager"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Ads Manager</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-offers"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Offers</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-notes"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Notes</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-recent_ad_activity"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Recent Ad Activity</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-recommendations"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Recommendations</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-buy_and_sell_groups"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Buy and Sell Groups</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-create_a_frame"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Create a Frame</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-discover_people"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Discover People</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-gaming_video"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Gaming Video</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-payment_history"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Payment History</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-crisis_response"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Crisis Response</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="menu-row">
+                  <div class="menu-icon">
+                    <i class="icon-20-weather"></i>
+                  </div>
+                  <div class="menu-body">
+                    <a href="#">Weather</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-list">
+            <div class="menu-header">
+              <h4 class="menu-title">Create</h4>
+            </div>
+            <ul class="list-inline list-inline-dot mb-0">
+              <li class="list-inline-item"><a href="#">Ad</a></li>
+              <li class="list-inline-item"><a href="#">Page</a></li>
+              <li class="list-inline-item"><a href="#">Group</a></li>
+              <li class="list-inline-item"><a href="#">Event</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="card form-box-sm">
+          <div class="card-body">
+            <form class="form-box-content">
+              <h5 class="form-h5 text-center">Log in to Facebook</h5>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                       placeholder="Email address or phone number">
+              </div>
+
+              <div class="form-group">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <button class="btn btn-block btn-xl btn-primary" type="submit">Log In</button>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-block btn-secondary" type="button">Recover Your Account</button>
+                <a href="#" class="btn btn-block btn-link font-weight-normal">Sign up for Facebook</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <ul class="card-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="icon-16-make_post"></i> Make Post</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="icon-16-album"></i> Photo/Video Album</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="icon-16-live_video"></i> Live Video</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="card-post-input-wrap media-user">
+              <div class="media-user-img card-post-avatar">
+                <img class="rounded-circle" src="/dummy/avatar.png" alt="">
+              </div>
+              <div class="media-user-body">
+                <div class="card-post-input" contenteditable="true" placeholder="What's on your mind,"></div>
+              </div>
+            </div>
+            <div class="card-post-action">
+              <button class="btn btn-lg btn-rounded btn-default">
+                <i class="icon-20-photo_video"></i> <span>Photo/Video</span>
+              </button>
+              <button class="btn btn-lg btn-rounded btn-default">
+                <i class="icon-20-feeling_activity"></i> <span>Feeling/Activity</span>
+              </button>
+              <button class="btn btn-lg btn-rounded btn-default">
+                <i class="icon-20-ellipsis"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="media-user card-heading">
+              <div class="media-user-img card-heading-avatar">
+                <img src="/dummy/avatar.png" alt="">
+              </div>
+              <div class="media-user-body card-heading-info">
+                <p><a class="name" href="#">Hóng</a> shared a <a href="#">post</a>.</p>
+                <small><a href="#">14 mins</a></small>
+              </div>
+            </div>
+            <p class="card-text">Xào nồi không có gì vui, tốt nhất chúng ta không nên xào nồi.</p>
+          </div>
+          <div class="card-img">
+            <img
+              src="https://scontent.fsgn3-1.fna.fbcdn.net/v/t45.1600-4/cp0/q90/c52.0.1130.592/s526x296/36653883_6101272217492_3568517850404487168_n.png.jpg?_nc_cat=0&amp;efg=eyJxZV9ncm91cHMiOlsibm9fc2FmZV9pbWFnZV9mb3JfYWRzX2ltYWdlIl19&amp;_nc_eui2=AeEOIo0R8pB0hLvs1XQgjHzxNzw4DallGP0NBDVykLdtcWh2GhvpWzJeF5H4VPS_NHOF4jda-Hrtk-ThzyHRKCAQIa-1pWC8DYaS5n_cbZ4-xw&amp;oh=8fbf9cd785cee7a2eae3da49ab6a4c79&amp;oe=5BDFE702"
+              alt="">
+          </div>
+          <div class="card-footer">
+            <div class="card-footer-action">
+              <a href="#">Like</a>
+              <a href="#">Comment</a>
+              <a href="#">Share</a>
+            </div>
+            <div class="card-footer-result">
+              <div class="card-footer-like">
+                111
+              </div>
+              <div class="card-footer-other-action">
+                <a href="#">4 Comments</a>
+                <a href="#">13 Shares</a>
+              </div>
+            </div>
+            <div class="card-comments">
+              <div class="card-comment media-user">
+                <div class="media-user-img comment-avatar">
+                  <img src="/dummy/avatar.png" alt="">
+                </div>
+                <div class="media-user-body comment-body">
+                  <div class="comment-text">
+                    <a class="comment-name" href="#">Jacob Edward</a> Happy anniversary!
+                  </div>
+                  <div class="comment-action">
+                    <a href="#">Like</a>
+                    <a href="#">Reply</a>
+                    <a class="comment-time" href="#">15h</a>
+                  </div>
+                  <div class="card-comment media-user">
+                    <div class="media-user-img comment-avatar">
+                      <img src="/dummy/avatar.png" alt="">
+                    </div>
+                    <div class="media-user-body comment-body">
+                      <div class="comment-text">
+                        <a class="comment-name" href="#">Jacob Edward</a> Happy anniversary!
+                      </div>
+                      <div class="comment-action">
+                        <a href="#">Like</a>
+                        <a href="#">Reply</a>
+                        <a class="comment-time" href="#">15h</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-comment media-user">
+                <div class="media-user-img comment-avatar">
+                  <img class="rounded-circle" src="/dummy/avatar.png" alt="">
+                </div>
+                <div class="media-user-body comment-body">
+                  <div class="card-comment-input-wrap">
+                    <div class="card-comment-input" contenteditable="true" placeholder="Write a comment..."></div>
+                    <div class="card-comment-input-action">
+                      <a href="#"><i class="icon-16-emoji"></i></a>
+                      <a href="#"><i class="icon-16-camera"></i></a>
+                      <a href="#"><i class="icon-16-gif"></i></a>
+                      <a href="#"><i class="icon-16-sticker"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="main-right">
+        <div class="aside-box">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">
+                <h4 class="h4"><a href="#">Stories</a></h4>
+                <div class="card-title-action">
+                  <a class="card-title-action-more" href="#"><i class="icon-20-ellipsis"></i></a>
+                </div>
+              </div>
+
+              <ul class="media-user-list list-unstyled">
+                <li class="media-user media-user-md">
+                  <div class="media-user-img">
+                    <img src="/dummy/avatar2.jpg" alt="">
+                  </div>
+                  <div class="media-user-body">
+                    <p><a class="name link-block-over" href="#">Purebreak</a></p>
+                    <span class="text-faded">4 hours ago</span>
+                  </div>
+                </li>
+                <li class="media-user media-user-md">
+                  <div class="media-user-img">
+                    <img src="/dummy/avatar2.jpg" alt="">
+                  </div>
+                  <div class="media-user-body">
+                    <p><a class="name link-block-over" href="#">Purebreak</a></p>
+                    <span class="text-faded">4 hours ago</span>
+                  </div>
+                </li>
+                <li class="media-user media-user-md">
+                  <div class="media-user-img">
+                    <img src="/dummy/avatar2.jpg" alt="">
+                  </div>
+                  <div class="media-user-body">
+                    <p><a class="name link-block-over" href="#">Purebreak</a></p>
+                    <span class="text-faded">4 hours ago</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">
+                <div class="h4 dropdown">
+                  <a href="#">Your Pages (7)</a>
+                </div>
+                <div class="card-title-action">
+                  <a class="card-title-action-more" href="#"><i class="icon-20-ellipsis"></i></a>
+                </div>
+              </div>
+              <div class="card-page">
+                <div class="card-page-info">
+                  <div class="media-user media-user-lg">
+                    <div class="media-user-img border-0">
+                      <img class="rounded-0" src="/dummy/avatar.png" alt="">
+                    </div>
+                    <div class="media-user-body">
+                      <p><a class="name" href="#">Hóng</a></p>
+                      <ul class="list-unstyled">
+                        <li><a href="#"><i class="icon-16-messages"></i> Messages</a></li>
+                        <li><a href="#"><i class="icon-16-globe"></i> Notifications</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-page-menu">
+                  <ul>
+                    <li><a href="#"><i class="icon-16-compose"></i> <span>Publish</span></a></li>
+                    <li><a href="#"><i class="icon-16-camera_photo"></i> <span>Photo</span></a></li>
+                    <li><a href="#"><i class="icon-16-camcorder_live"></i> <span>Live</span></a></li>
+                    <li><a href="#"><i class="icon-16-friend_add"></i> <span>Invite</span></a></li>
+                  </ul>
+                </div>
+                <div class="card-page-action">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-secondary active">Likes</button>
+                    <button type="button" class="btn btn-secondary">Views</button>
+                    <button type="button" class="btn btn-secondary">Posts</button>
+                  </div>
+                </div>
+                <div class="card-page-insights">
+                  <div class="card-page-likes">
+                    <dl>
+                      <dt><a href="#">11,314</a></dt>
+                      <dd>
+                        <p>24 new likes this week</p>
+                      </dd>
+                      <dd>
+                        <div class="media-user media-user-sm">
+                          <div class="media-user-img">
+                            <img src="/dummy/avatar.png" alt="">
+                          </div>
+                        </div>
+                        <div class="media-user media-user-sm">
+                          <div class="media-user-img">
+                            <img src="/dummy/avatar.png" alt="">
+                          </div>
+                        </div>
+                        <div class="media-user media-user-sm">
+                          <div class="media-user-img">
+                            <img src="/dummy/avatar.png" alt="">
+                          </div>
+                        </div>
+                        <div class="media-user media-user-sm">
+                          <div class="media-user-img">
+                            <img src="/dummy/avatar.png" alt="">
+                          </div>
+                        </div>
+                        <div class="media-user media-user-sm">
+                          <div class="media-user-img">
+                            <img src="/dummy/avatar.png" alt="">
+                          </div>
+                        </div>
+                        <div class="media-user media-user-sm">
+                          <div class="media-user-img">
+                            <img src="/dummy/avatar.png" alt="">
+                          </div>
+                        </div>
+                        <div class="media-user media-user-sm">
+                          <div class="media-user-img">
+                            <img src="/dummy/avatar.png" alt="">
+                          </div>
+                        </div>
+                        <div class="media-user media-user-sm">
+                          <div class="media-user-img">
+                            <img src="/dummy/avatar.png" alt="">
+                          </div>
+                        </div>
+                        <div class="media-user media-user-sm">
+                          <div class="media-user-img">
+                            <img src="/dummy/avatar.png" alt="">
+                          </div>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div class="card-subtitle">
+                <h5 class="h5">
+                  <span>Promote Your Page's Call-to-Action Button</span>
+                </h5>
+                <div class="card-subtitle-action">
+                  <a class="card-subtitle-action-more" href="#"><i class="icon-10-close"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">
+                <h4 class="h4"><a href="#">Sponsored</a></h4>
+                <div class="card-title-action">
+                  <a href="#">Create Ad</a>
+                </div>
+              </div>
+              <div class="card-ads position-relative">
+                <div class="card-img">
+                  <img
+                    src="https://scontent.fsgn3-1.fna.fbcdn.net/v/t45.1600-4/cp0/q90/c52.0.1130.592/s526x296/36653883_6101272217492_3568517850404487168_n.png.jpg?_nc_cat=0&amp;efg=eyJxZV9ncm91cHMiOlsibm9fc2FmZV9pbWFnZV9mb3JfYWRzX2ltYWdlIl19&amp;_nc_eui2=AeEOIo0R8pB0hLvs1XQgjHzxNzw4DallGP0NBDVykLdtcWh2GhvpWzJeF5H4VPS_NHOF4jda-Hrtk-ThzyHRKCAQIa-1pWC8DYaS5n_cbZ4-xw&amp;oh=8fbf9cd785cee7a2eae3da49ab6a4c79&amp;oe=5BDFE702"
+                    alt="">
+                </div>
+                <div class="card-other">
+                  <div class="card-other-info">
+                    <p class="title"><a class="link-block-over" href="#">Hire the Top 3% of Developers Fast</a></p>
+                    <div class="small"><a href="#">www.mobileaction.co/bestappstoreoptimization</a></div>
+                    <p>See our pay-once &amp; use lifetime ASO Basic Package for just $99!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-ads position-relative">
+                <div class="card-img">
+                  <img
+                    src="https://scontent.fsgn3-1.fna.fbcdn.net/v/t45.1600-4/cp0/q90/c52.0.1130.592/s526x296/36653883_6101272217492_3568517850404487168_n.png.jpg?_nc_cat=0&amp;efg=eyJxZV9ncm91cHMiOlsibm9fc2FmZV9pbWFnZV9mb3JfYWRzX2ltYWdlIl19&amp;_nc_eui2=AeEOIo0R8pB0hLvs1XQgjHzxNzw4DallGP0NBDVykLdtcWh2GhvpWzJeF5H4VPS_NHOF4jda-Hrtk-ThzyHRKCAQIa-1pWC8DYaS5n_cbZ4-xw&amp;oh=8fbf9cd785cee7a2eae3da49ab6a4c79&amp;oe=5BDFE702"
+                    alt="">
+                </div>
+                <div class="card-other">
+                  <div class="card-other-info">
+                    <p class="title"><a class="link-block-over" href="#">Hire the Top 3% of Developers Fast</a></p>
+                    <div class="small"><a href="#">www.mobileaction.co/bestappstoreoptimization</a></div>
+                    <p>See our pay-once &amp; use lifetime ASO Basic Package for just $99!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title">
+                <h4 class="h4"><span href="#">Suggested Pages</span></h4>
+                <div class="card-title-action">
+                  <a href="#">See All</a>
+                </div>
+              </div>
+              <div class="card-suggested">
+                <div class="card-suggested-likes">
+                  <a href="#">Anh</a> likes this.
+                </div>
+                <div class="card-suggested-info">
+                  <div class="media-user">
+                    <div class="media-user-img border-0">
+                      <img class="rounded-0" src="/dummy/avatar.png" alt="">
+                    </div>
+                    <div class="media-user-body">
+                      <p><a class="name" href="#">Hóng</a></p>
+                      <span class="text-faded">Local Business</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-suggested-box">
+                  <div class="card-img">
+                    <img
+                      src="https://scontent.fsgn3-1.fna.fbcdn.net/v/t45.1600-4/cp0/q90/c52.0.1130.592/s526x296/36653883_6101272217492_3568517850404487168_n.png.jpg?_nc_cat=0&amp;efg=eyJxZV9ncm91cHMiOlsibm9fc2FmZV9pbWFnZV9mb3JfYWRzX2ltYWdlIl19&amp;_nc_eui2=AeEOIo0R8pB0hLvs1XQgjHzxNzw4DallGP0NBDVykLdtcWh2GhvpWzJeF5H4VPS_NHOF4jda-Hrtk-ThzyHRKCAQIa-1pWC8DYaS5n_cbZ4-xw&amp;oh=8fbf9cd785cee7a2eae3da49ab6a4c79&amp;oe=5BDFE702"
+                      alt="">
+                  </div>
+                  <button class="btn btn-block btn-md btn-secondary"><i class="icon-16-like-o"></i> Like Page</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="footer" id="footer">
   </footer>
@@ -74,19 +819,17 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
 
 <!--<script src="dist/core.min.js"></script>-->
 <!--<script src="dist/app.min.js"></script>-->
 <script src="js/common.js"></script>
-
 </body>
 </html>
