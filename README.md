@@ -14,10 +14,10 @@ This template features predefined file paths for Bootstrap 4 and jQuery, so you 
 
 To begin using this template, choose one of the following options to get started:
 
-* [Download the latest release](https://github.com/trungnghia112/frontend-seed-4/releases)
-* Install via npm: `npm i frontend-seed-4`
-* Clone the repo: `git clone https://github.com/trungnghia112/frontend-seed-4.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/trungnghia112/frontend-seed-4)
+- [Download the latest release](https://github.com/trungnghia112/frontend-seed-4/releases)
+- Install via npm: `npm i frontend-seed-4`
+- Clone the repo: `git clone https://github.com/trungnghia112/frontend-seed-4.git`
+- [Fork, Clone, or Download on GitHub](https://github.com/trungnghia112/frontend-seed-4)
 
 ## Usage
 
@@ -44,19 +44,19 @@ Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/fron
 
 ## Features
 
-* Simple, intuitive, clean code.
+- Simple, intuitive, clean code.
 
-* **Bootstrap ^4.1.1**
+- **Bootstrap ^4.1.3**
 
-* **Popper ^1.12.9**(Because Bootstrap popovers and tooltips need it)
+- **Popper ^1.14.4**(Because Bootstrap popovers and tooltips need it)
 
-* **jQuery ^3.2.1**
+- **jQuery ^3.2.1**
 
-* **Modernizr 2.8.3**
+- **Modernizr 2.8.3**
 
-* **Font Awesome 5.0.13**
+- **Font Awesome 5.2.0**
 
-* **Prettier 1.11.1** (Opinionated Code Formatter).
+- **Prettier 1.14.2** (Opinionated Code Formatter).
 
 ## Buy me a beer
 
