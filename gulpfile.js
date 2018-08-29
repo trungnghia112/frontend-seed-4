@@ -22,10 +22,6 @@ const paths = {
     src: 'scss/**/*.scss',
     dest: 'css/'
   },
-  stylesAssets: {
-    src: 'assets/scss/**/*.scss',
-    dest: 'css/'
-  },
   stylesMin: {
     src: 'scss/**/*.scss',
     dest: 'dist/'
@@ -129,7 +125,6 @@ function serve() {
   });
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.scriptsCore.src, scriptsCore);
-  gulp.watch(paths.stylesAssets.src, styles);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.stylesMin.src, stylesMin);
   gulp.watch(paths.images.src, images);
@@ -139,7 +134,6 @@ function serve() {
 function watch() {
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.scriptsCore.src, scriptsCore);
-  gulp.watch(paths.stylesAssets.src, styles);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.stylesMin.src, stylesMin);
   gulp.watch(paths.images.src, images);

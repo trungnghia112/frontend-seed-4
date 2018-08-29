@@ -1,0 +1,67 @@
+* {
+  min-height: 0; /* Rendering problems using flexbox in Firefox and Chrome 48 */
+  min-width: 0; /* Rendering problems using flexbox in Firefox and Chrome 48 */
+}
+
+body {
+  //font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.img-full {
+  width: 100%;
+  height: auto;
+}
+
+.img-bg {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+a.disabled {
+  cursor: text;
+  text-decoration: none;
+  color: #90949c;
+}
+
+.link-block-over {
+  display: block;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
+
+.text-faded {
+  color: #8d949e;
+}
+
+.ellipses {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bg-facebook {
+  background-color: $bg-facebook;
+}
+
+.bg-twitter {
+  background-color: $bg-twitter;
+}
+
+.bg-google {
+  background-color: $bg-google;
+}
+
+small, .small {
+  @include font-size(12px);
+}

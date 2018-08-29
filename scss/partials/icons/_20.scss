@@ -1,0 +1,467 @@
+[class*="icon-20-"] {
+  width: 20px;
+  height: 20px;
+  background-image: url('#{$assets-path}/images/icons/icon-2.png');
+}
+
+.icon-20 {
+  width: 20px;
+  height: 20px;
+  @include inline-flex;
+  @include align-items(center);
+  @include justify-content(center);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.icon-20-events {
+  background-image: url('#{$assets-path}/images/icons/icon-2-1.png');
+  background-position: 0 -84px;
+}
+
+.icon-20-new-feed {
+  background-position: 0 -1136px;
+}
+
+.icon-20-messenger {
+  background-position: 0 -149px;
+}
+
+.icon-20-group {
+  background-position: 0 -1346px;
+}
+
+.icon-20-groups {
+  background-position: 0 -107px;
+}
+
+.icon-20-pages {
+  background-position: 0 -233px;
+}
+
+.icon-20-memories {
+  background-position: 0 -1199px;
+}
+
+.icon-20-live_video {
+  background-position: 0 -1031px;
+}
+
+.icon-20-pages_feed {
+  background-position: 0 -212px;
+}
+
+.icon-20-friend_lists {
+  background-position: 0 -758px;
+}
+
+.icon-20-saved {
+  background-position: 0 -317px;
+}
+
+.icon-20-manage_apps {
+  background-position: 0 -254px;
+}
+
+.icon-20-games {
+  background-position: 0 -863px;
+}
+
+.icon-20-insights {
+  background-position: 0 -254px;
+}
+
+.icon-20-photos {
+  background-position: 0 -1304px;
+}
+
+.icon-20-ads_manager {
+  background-position: 0 -275px;
+}
+
+.icon-20-offers {
+  background-position: 0 -1178px;
+}
+
+.icon-20-notes {
+  background-position: 0 -1157px;
+}
+
+.icon-20-create_a_frame {
+  background-position: 0 -506px;
+}
+
+.icon-20-recommendations {
+  background-position: 0 -611px;
+}
+
+.icon-20-crisis_response {
+  background-position: 0 -569px;
+}
+
+.icon-20-gaming_video {
+  background-position: 0 -842px;
+}
+
+.icon-20-payment_history {
+  background-position: 0 -1220px;
+}
+
+.icon-20-recent_ad_activity {
+  background-position: 0 -1430px;
+}
+
+.icon-20-discover_people {
+  background-position: 0 -632px;
+}
+
+.icon-20-buy_and_sell_groups {
+  background-position: 0 -1556px;
+}
+
+.icon-20-weather {
+  background-position: 0 -1535px;
+}
+
+.icon-20-photo_video {
+  background-position: 0 -1283px;
+}
+
+.icon-20-feeling_activity {
+  background-position: 0 -695px;
+}
+
+.icon-20-tag_friends {
+  background-position: 0 -779px;
+}
+
+.icon-20-tag_sticker {
+  background-position: 0 -1514px;
+}
+
+.icon-20-tag_event {
+  background-position: 0 -485px;
+}
+
+.icon-20-check_in {
+  background-position: 0 -1325px;
+}
+
+.icon-20-gif {
+  background-position: 0 -905px;
+}
+
+.icon-20-poll {
+  background-position: 0 -1388px;
+}
+
+.icon-20-ask_for_recommendations {
+  background-position: 0 -611px;
+}
+
+.icon-20-list {
+  background-position: 0 -989px;
+}
+
+.icon-20-answer_a_question {
+  background-position: 0 -1598px;
+}
+
+.icon-20-ellipsis {
+  background-position: 0 -1976px;
+}
+
+.icon-20-devil_horns {
+  background-position: 0 -1472px;
+}
+
+.icon-20-basketball {
+  background-image: url('#{$assets-path}/images/icons/basketball-football.png');
+}
+
+.icon-20-fist {
+  background-image: url('#{$assets-path}/images/icons/icon-2-3.png');
+  background-position: 0 -42px;
+}
+
+.icon-20-fist-1 {
+  background-position: 0 -1409px;
+}
+
+.icon-20-palette {
+  background-image: url('#{$assets-path}/images/icons/palette.png');
+}
+
+.icon-20-fish {
+  background-image: url('#{$assets-path}/images/icons/fish.png');
+}
+
+.icon-20-comedy {
+  background-image: url('#{$assets-path}/images/icons/comedy.png');
+}
+
+.icon-20-skull,
+.icon-20-sunglasses,
+.icon-20-teddy_bear,
+.icon-20-planet,
+.icon-20-tree-1,
+.icon-20-coffee,
+.icon-20-books,
+.icon-20-paw_print,
+.icon-20-horse,
+.icon-20-star-square,
+.icon-20-rainbow,
+.icon-20-plastic_cup,
+.icon-20-music_staff,
+.icon-20-flower,
+.icon-20-pointing_right,
+.icon-20-calculator,
+.icon-20-guitar,
+.icon-20-broken_heart,
+.icon-20-beaker,
+.icon-20-globe,
+.icon-20-wine,
+.icon-20-lightbulb,
+.icon-20-tent,
+.icon-20-apple_red {
+  background-image: url('#{$assets-path}/images/icons/icon-2-2.png');
+}
+
+.icon-20-skull {
+  background-position: 0 -399px;
+}
+
+.icon-20-sunglasses {
+  background-position: 0 -189px;
+}
+
+.icon-20-teddy_bear {
+  background-position: 0 -441px;
+}
+
+.icon-20-planet {
+  background-position: 0 -378px;
+}
+
+.icon-20-apple_red {
+  background-position: 0 0;
+}
+
+.icon-20-tree-1 {
+  background-position: 0 -273px;
+}
+
+.icon-20-tree {
+  background-position: 0 -1619px;
+}
+
+.icon-20-coffee {
+  background-position: 0 -148px;
+}
+
+.icon-20-briefcase {
+  background-position: 0 -338px;
+}
+
+.icon-20-loudspeaker {
+  background-position: 0 -1074px;
+}
+
+.icon-20-trophy {
+  background-position: 0 -1640px;
+}
+
+.icon-20-camera {
+  background-position: 0 -527px;
+}
+
+.icon-20-books {
+  background-position: 0 -42px;
+}
+
+.icon-20-book {
+  background-position: 0 -296px;
+}
+
+.icon-20-horse {
+  background-position: 0 -252px;
+}
+
+.icon-20-film {
+  background-position: 0 -590px;
+}
+
+.icon-20-star-square {
+  background-position: 0 -125px;
+}
+
+.icon-20-rainbow {
+  background-position: 0 -336px;
+}
+
+.icon-20-home {
+  background-position: 0 -968px;
+}
+
+.icon-20-plastic_cup {
+  background-position: 0 -420px;
+}
+
+.icon-20-tennis {
+  background-image: url('#{$assets-path}/images/icons/tennis.png');
+}
+
+.icon-20-music_staff {
+  background-position: 0 -294px;
+}
+
+.icon-20-gamepad {
+  background-position: 0 -1766px;
+}
+
+.icon-20-dice {
+  background-image: url('#{$assets-path}/images/icons/icon-2-3.png');
+  background-position: 0 -21px;
+}
+
+.icon-20-gift {
+  background-position: 0 -926px;
+}
+
+.icon-20-rugby {
+  background-image: url('#{$assets-path}/images/icons/rugby.png');
+}
+
+.icon-20-bear {
+  background-image: url('#{$assets-path}/images/icons/bear.png');
+}
+
+.icon-20-microchip {
+  background-position: 0 -1115px;
+}
+
+.icon-20-flower {
+  background-position: 0 -168px;
+}
+
+.icon-20-pointing_right {
+  background-position: 0 -357px;
+}
+
+.icon-20-calculator {
+  background-position: 0 -105px;
+}
+
+.icon-20-pie_chart {
+  background-image: url('#{$assets-path}/images/icons/icon-2-4.png');
+  background-position: 0 -21px;
+}
+
+.icon-20-guitar {
+  background-position: 0 -231px;
+}
+
+.icon-20-broken_heart {
+  background-position: 0 -63px;
+}
+
+.icon-20-baseball {
+  background-image: url('#{$assets-path}/images/icons/baseball.png');
+}
+
+.icon-20-beaker {
+  background-position: 0 -21px;
+}
+
+.icon-20-globe {
+  background-position: 0 -210px;
+}
+
+.icon-20-dove {
+  background-position: 0 -653px;
+}
+
+.icon-20-graduation_cap {
+  background-position: 0 -1094px;
+}
+
+.icon-20-wine {
+  background-position: 0 -483px;
+}
+
+.icon-20-laws {
+  background-position: 0 -884px;
+}
+
+.icon-20-golf_ball {
+  background-image: url('#{$assets-path}/images/icons/golf_ball.png');
+}
+
+.icon-20-bones {
+  background-image: url('#{$assets-path}/images/icons/bones.png');
+}
+
+.icon-20-hockey_stick {
+  background-image: url('#{$assets-path}/images/icons/hockey_stick.png');
+}
+
+.icon-20-blueprint {
+  background-image: url('#{$assets-path}/images/icons/icon-2-4.png');
+}
+
+.icon-20-soccer {
+  background-image: url('#{$assets-path}/images/icons/basketball-football.png');
+  background-position: 0 -21px;
+}
+
+.icon-20-chess {
+  background-image: url('#{$assets-path}/images/icons/icon-2-3.png');
+}
+
+.icon-20-runner {
+  background-image: url('#{$assets-path}/images/icons/runner.png');
+}
+
+.icon-20-lightbulb {
+  background-position: 0 -84px;
+}
+
+.icon-20-tent {
+  background-position: 0 -462px;
+}
+
+.icon-20-paw_print {
+  background-position: 0 -315px;
+}
+
+.icon-20-get_together {
+  background-position: 0 -947px;
+}
+
+.icon-20-watch_party {
+  background-position: 0 -1661px;
+}
+
+.icon-20-circle-guard {
+  background-image: url('#{$assets-path}/images/icons/24-guard.png');
+  background-position: 0 -31px;
+  -webkit-background-size: 34px 51px;
+  background-size: 34px 51px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
