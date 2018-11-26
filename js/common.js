@@ -1,7 +1,7 @@
 /*!--------------------------------------------------------------------------------
 
  Theme Name: Frontend Seed 4
- Version:    1.5.1
+ Version:    1.6.0
  Author:     trungnghia112 <trungnghia112@gmail.com>
 
  -----------------------------------------------------------------------------------*/
@@ -38,9 +38,9 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
   # Smooth Scroll
   ===================================================*/
   function scrollToAnchor() {
-    $('.js-scroll-to').on('click', function(event) {
-      var $anchor = $(this);
-      var headerH = '0';
+    $('.js-scroll-to').on('click', function (event) {
+      let $anchor = $(this);
+      let headerH = '0';
       $('html, body')
         .stop()
         .animate(
@@ -58,17 +58,17 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     getBarwidth();
   }
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     init();
   }); // end document ready function
 
-  $(window).on('scroll', function() {
+  $(window).on('scroll', function () {
   });
 
   // if ($('.x-toTop').length) {
-  //   var scrollTrigger = 100, // px
+  //   let scrollTrigger = 100, // px
   //     backToTop = function () {
-  //       var scrollTop = $(window).scrollTop();
+  //       let scrollTop = $(window).scrollTop();
   //       if (scrollTop > scrollTrigger) {
   //         $('.x-toTop').addClass('active');
   //       } else {

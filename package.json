@@ -1,6 +1,6 @@
 {
   "name": "frontend-seed-4",
-  "version": "1.5.4",
+  "version": "1.6.0",
   "description": "A basic HTML starter template for Bootstrap 4",
   "keywords": [
     "css",
@@ -26,7 +26,8 @@
     "prettier": "prettier ./**/*.{ts,json,md,scss} --write",
     "clean": "gulp clean",
     "build": "npm run clean && npm run prettier && gulp build",
-    "release": "standard-version"
+    "release": "standard-version",
+    "publish": "git push --follow-tags origin master && npm publish"
   },
   "engines": {
     "node": ">=6.9.0",
