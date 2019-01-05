@@ -35,16 +35,10 @@
 //
 // =Global
 // --------------------------------------------------
-@import 'general/mixin';
-@import 'general/setting';
-@import 'partials/constants';
-@import 'partials/typography';
-@import 'partials/forms';
-@import 'partials/buttons';
+@import 'general/flex';
+@import 'bootstrap/bootstrap';
 @import 'partials/scrollbar-measure';
-@import 'partials/modals';
 @import 'partials/icons';
-@import 'partials/grid';
 //
 // =Modules
 // --------------------------------------------------
