@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.7.3"></a>
+## [1.7.3](https://github.com/trungnghia112/frontend-seed-4/compare/v1.7.2...v1.7.3) (2019-01-08)
+
+
+
 <a name="1.7.2"></a>
 ## [1.7.2](https://github.com/trungnghia112/frontend-seed-4/compare/v1.7.1...v1.7.2) (2019-01-05)
 
