@@ -26,7 +26,8 @@
     "prettier": "prettier ./**/*.{ts,json,md,scss} --write",
     "clean": "gulp clean",
     "build": "npm run clean && npm run prettier && gulp build",
-    "release": "standard-version",
+    "release": "standard-version -a",
+    "release-minor": "standard-version minor -a",
     "publish": "git push --follow-tags origin master && npm publish"
   },
   "engines": {
