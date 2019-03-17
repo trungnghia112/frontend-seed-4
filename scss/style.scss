@@ -4,54 +4,45 @@
     Author:     trungnghia112 <trungnghia112@gmail.com>
 
 -----------------------------------------------------------------------------------*/
+//  Core
 //  Bootstrap
-//  Fonts
-//  Global
-//  Third party
+//  Third parties
+//  Partials
+//  Modules
 //  Layout
-//  Content
+//  Pages
 //---------------------------------------------------------------------------------*/
 //
-// =Constants
+// =Core
 // --------------------------------------------------
-@import 'custom-variables';
+@import 'core';
 //
 // =Bootstrap
 // --------------------------------------------------
 @import 'custom-bootstrap';
-//
-// =Fontawesome
-// --------------------------------------------------
-@import '../fonts/fontawesome/scss/regular';
-@import '../fonts/fontawesome/scss/brands';
-@import '../fonts/fontawesome/scss/solid';
-@import '../fonts/fontawesome/scss/fontawesome';
+@import 'bootstrap/bootstrap';
 //
 // =Third parties
+// --------------------------------------------------
 //
-// =Fonts
+// =Partials
 // --------------------------------------------------
 @import 'partials/fonts';
-//
-// =Global
-// --------------------------------------------------
-@import 'general/flex';
-@import 'bootstrap/bootstrap';
-@import 'partials/scrollbar-measure';
 @import 'partials/icons';
+@import 'partials/scrollbar-measure';
 //
 // =Modules
 // --------------------------------------------------
-@import 'modules/IconHoverEffects';
-@import 'modules/facebook-responsive';
+//@import "modules/facebook-responsive";
+//@import "modules/IconHoverEffects";
 @import 'modules/list';
 //
 // =Layout
 // --------------------------------------------------
 @import 'layout/header';
-@import 'layout/footer';
 @import 'layout/content';
+@import 'layout/footer';
 //
-// =Content
+// =Pages
 // --------------------------------------------------
 @import 'pages/home';
