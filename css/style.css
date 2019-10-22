@@ -9580,6 +9580,31 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #dd4b39;
 }
 
+.custom-select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.custom-range {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.custom-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.custom-range::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.custom-range::-ms-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .fz30 {
   font-size: 30px !important;
 }
@@ -10123,6 +10148,10 @@ Header
 /* ==========================================================================
 Content
 ========================================================================== */
+.app-loading {
+  display: none;
+}
+
 /* ==========================================================================
 Footer
 ========================================================================== */

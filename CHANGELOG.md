@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.3](https://github.com/trungnghia112/frontend-seed-4/compare/v1.8.2...v1.8.3) (2019-10-22)
+
 ### [1.8.2](https://github.com/trungnghia112/frontend-seed-4/compare/v1.8.1...v1.8.2) (2019-10-22)
 
 ## [1.8.1](https://github.com/trungnghia112/frontend-seed-4/compare/v1.7.6...v1.8.1) (2019-03-17)
