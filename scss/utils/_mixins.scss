@@ -253,3 +253,40 @@ $retina-suffix: '@2x';
     border-left: $size-w solid transparent;
   }
 }
+
+@function calculateTextHeight(
+  $line: 1,
+  $font-size: $font-size-base,
+  $line-height: $line-height-base
+) {
+  @return ($font-size * $line-height * $line);
+}
+
+@mixin max-height-text(
+  $line: 1,
+  $fixed: false,
+  $font-size: $font-size-base,
+  $line-height: $line-height-base
+) {
+  max-height: calculateTextHeight($line, $font-size, $line-height);
+  @if ($fixed) {
+    height: calculateTextHeight($line, $font-size, $line-height);
+  }
+  overflow: hidden;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+@mixin overplay-item() {
+  content: '';
+  position: absolute;
+  @include gradient-y(transparent, #000);
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
