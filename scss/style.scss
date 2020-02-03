@@ -1,48 +1,127 @@
-/*!--------------------------------------------------------------------------------
-
-    Theme Name: Frontend Seed 4
-    Author:     trungnghia112 <trungnghia112@gmail.com>
-
------------------------------------------------------------------------------------*/
-//  Core
-//  Bootstrap
-//  Third parties
-//  Partials
-//  Modules
-//  Layout
-//  Pages
-//---------------------------------------------------------------------------------*/
-//
-// =Core
-// --------------------------------------------------
 @import 'core';
-//
-// =Bootstrap
-// --------------------------------------------------
-@import 'custom-bootstrap';
-@import 'bootstrap/bootstrap';
-//
-// =Third parties
-// --------------------------------------------------
-//
-// =Partials
-// --------------------------------------------------
-@import 'partials/fonts';
-@import 'partials/icons';
-@import 'partials/scrollbar-measure';
-//
-// =Modules
-// --------------------------------------------------
-//@import "modules/facebook-responsive";
-//@import "modules/IconHoverEffects";
-@import 'modules/list';
-//
-// =Layout
-// --------------------------------------------------
-@import 'layout/header';
-@import 'layout/content';
-@import 'layout/footer';
-//
-// =Pages
-// --------------------------------------------------
-@import 'pages/home';
+
+.right-native-widget-wrap {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+
+  a {
+    text-decoration: none;
+    color: #2c3642;
+
+    &:hover {
+      color: #2b397b;
+    }
+  }
+}
+
+.right-native-widget-nav {
+  .nav-item {
+    font-size: 40px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    line-height: 1;
+
+    &.disabled {
+      opacity: 0.2;
+    }
+  }
+}
+
+.right-native-widget-bar {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 5px;
+  color: #646c9a;
+
+  .right-native-widget-pos-left {
+    float: left;
+  }
+
+  .right-native-widget-pos-right {
+    float: right;
+  }
+
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+.right-native-widget-header-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.right-native-widget-header-brand {
+  @include flexbox;
+  @include align-items(center);
+  margin-bottom: 1px;
+
+  img {
+    margin-left: 3px;
+  }
+}
+
+.right-native-widget-row {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  margin-left: -4px;
+  margin-right: -4px;
+
+  .right-native-widget-col {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 10px;
+  }
+
+  .right-native-widget-image {
+    position: relative;
+    padding-bottom: 56%;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .right-native-card-ads {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+
+      img {
+        height: 20px;
+        width: auto;
+        float: right;
+      }
+    }
+  }
+
+  .right-native-widget-title {
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.1;
+    font-style: normal;
+    text-decoration: none;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  @for $i from 1 through 6 {
+    .right-native-widget-row-#{$i} {
+      > .right-native-widget-col {
+        flex: 0 0 percentage(1 / $i);
+        // Add a `max-width` to ensure content within each column does not blow out
+        // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+        // do not appear to require this.
+        max-width: percentage(1 / $i);
+      }
+    }
+  }
+}
