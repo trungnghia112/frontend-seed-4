@@ -3,6 +3,12 @@
 .right-native-widget-wrap {
   font-family: 'Open Sans', 'Arial', sans-serif;
 
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; // 1
+  }
+
   a {
     text-decoration: none;
     color: #2c3642;
@@ -48,9 +54,7 @@
 }
 
 .right-native-widget-header-title {
-  text-transform: uppercase;
   font-weight: bold;
-  font-size: 17px;
 }
 
 .right-native-widget-header-brand {
@@ -60,6 +64,8 @@
 
   img {
     margin-left: 3px;
+    height: 24px !important;
+    width: auto !important;
   }
 }
 
@@ -75,40 +81,45 @@
     margin-bottom: 10px;
   }
 
+  .right-native-widget-item {
+    display: block;
+  }
+
   .right-native-widget-image {
     position: relative;
     padding-bottom: 56%;
+    overflow: hidden;
 
     > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
     }
 
     .right-native-card-ads {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      z-index: 2;
+      position: absolute !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      z-index: 2 !important;
 
       img {
-        height: 20px;
-        width: auto;
-        float: right;
+        height: 20px !important;
+        width: 20px !important;
+        float: right !important;
       }
     }
   }
 
   .right-native-widget-title {
     margin-top: 5px;
-    font-weight: 700;
-    font-size: 13px;
     line-height: 1.1;
-    font-style: normal;
-    text-decoration: none;
+    //font-size: 13px;
+    //font-weight: normal;
+    //font-style: normal;
+    //text-decoration: none;
   }
 }
 
@@ -121,6 +132,89 @@
         // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
         // do not appear to require this.
         max-width: percentage(1 / $i);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .right-native-widget-row {
+    &.right-native-widget-row-mb-1 {
+      > .right-native-widget-col {
+        flex: 0 0 percentage(1 / 1);
+        // Add a `max-width` to ensure content within each column does not blow out
+        // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+        // do not appear to require this.
+        max-width: percentage(1 / 1);
+      }
+    }
+
+    &.right-native-widget-row-mb-2 {
+      > .right-native-widget-col {
+        flex: 0 0 percentage(1 / 2);
+        // Add a `max-width` to ensure content within each column does not blow out
+        // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+        // do not appear to require this.
+        max-width: percentage(1 / 2);
+      }
+    }
+  }
+}
+
+.device-mobile {
+  .right-native-widget-row.right-native-widget-row-mb-2 {
+    > .right-native-widget-col {
+      flex: 0 0 percentage(1 / 2);
+      // Add a `max-width` to ensure content within each column does not blow out
+      // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+      // do not appear to require this.
+      max-width: percentage(1 / 2);
+    }
+  }
+}
+
+.right-native-widget-image-hover {
+  .right-native-widget-item {
+    .right-native-widget-image {
+      img {
+        @include transition(all 0.3s ease-out);
+        @include transform(scale(1));
+      }
+    }
+
+    &:hover {
+      .right-native-widget-image {
+        img {
+          @include transform(scale(1.3));
+        }
+      }
+    }
+  }
+}
+
+.right-native-widget-image-inner-shadow {
+  .right-native-widget-item {
+    .right-native-widget-image {
+      &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0 !important;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        @include box-shadow(inset 0px 0px 75px black);
+        @include transition(all 0.3s linear);
+        border-radius: 2px;
+      }
+    }
+
+    &:hover {
+      .right-native-widget-image {
+        &:before {
+          @include box-shadow(inset 0px 0px 0px black);
+          border-radius: 0px;
+        }
       }
     }
   }
