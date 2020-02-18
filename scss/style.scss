@@ -1,5 +1,6 @@
 @import 'core';
 
+
 .right-native-widget-wrap {
   font-family: 'Open Sans', 'Arial', sans-serif;
 
@@ -64,7 +65,7 @@
 
   img {
     margin-left: 3px;
-    height: 24px !important;
+    height: 16px !important;
     width: auto !important;
   }
 }
@@ -203,7 +204,9 @@
         width: 100%;
         height: 100%;
         z-index: 10;
-        @include box-shadow(inset 0px 0px 75px black);
+        -webkit-box-shadow: inset 0px 0px 75px black;
+        -moz-box-shadow: inset 0px 0px 75px black;
+        box-shadow: inset 0px 0px 75px black;
         @include transition(all 0.3s linear);
         border-radius: 2px;
       }
@@ -212,7 +215,9 @@
     &:hover {
       .right-native-widget-image {
         &:before {
-          @include box-shadow(inset 0px 0px 0px black);
+          -webkit-box-shadow: inset 0px 0px 0px black;
+          -moz-box-shadow: inset 0px 0px 0px black;
+          box-shadow: inset 0px 0px 0px black;
           border-radius: 0px;
         }
       }
