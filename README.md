@@ -46,17 +46,17 @@ Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/fron
 
 - Simple, intuitive, clean code.
 
-- **Bootstrap ^4.3.1**
+- **Bootstrap ^4.4.1**
 
-- **Popper ^1.14.7**(Because Bootstrap popovers and tooltips need it)
+- **Popper ^1.16.1**(Because Bootstrap popovers and tooltips need it)
 
-- **jQuery ^3.3.1**
+- **jQuery ^3.4.1**
 
 - **Modernizr 2.8.3**
 
-- **Font Awesome 5.7.2**
+- **Font Awesome 5.12.1**
 
-- **Prettier 1.16.4** (Opinionated Code Formatter).
+- **Prettier 1.19.1** (Opinionated Code Formatter).
 
 ## Buy me a beer
 
