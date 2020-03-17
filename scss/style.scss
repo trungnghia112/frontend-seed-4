@@ -1,6 +1,5 @@
 @import 'core';
 
-
 .right-native-widget-wrap {
   font-family: 'Open Sans', 'Arial', sans-serif;
 
@@ -60,8 +59,9 @@
 
 .right-native-widget-header-brand {
   @include flexbox;
-  @include align-items(center);
+  @include align-items(flex-end);
   margin-bottom: 1px;
+  font-size: 8px !important;
 
   img {
     margin-left: 3px;
