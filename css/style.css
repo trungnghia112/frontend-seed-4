@@ -57,6 +57,21 @@
   color: #2b397b;
 }
 
+@media (max-width: 767.98px) {
+  .right-native-widget-wrap {
+    position: relative;
+  }
+  .right-native-widget-wrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    z-index: 10;
+  }
+}
+
 .right-native-widget-bar {
   clear: both;
   overflow: hidden;
@@ -141,6 +156,48 @@
 
 .right-native-widget-row .right-native-widget-item {
   display: block;
+  position: relative;
+}
+
+.right-native-widget-row .right-native-widget-is-loading {
+  overflow: hidden;
+}
+
+.right-native-widget-row .right-native-widget-is-loading:before, .right-native-widget-row .right-native-widget-is-loading:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.right-native-widget-row .right-native-widget-is-loading:before {
+  background-color: #f2f2f2;
+}
+
+.right-native-widget-row .right-native-widget-is-loading:after {
+  transform: translateX(-100%);
+  background-image: linear-gradient(90deg, transparent, rgba(153, 153, 153, 0.3), transparent);
+  animation: right-native-widget-loading 1.5s infinite;
+}
+
+@keyframes right-native-widget-loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.right-native-widget-row .right-native-widget-ad {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 24px;
+  height: 24px;
+  background-image: url("https://syndication.rightnativecontent.com/images/wages_ad.svg");
+  background-size: cover;
 }
 
 .right-native-widget-row .right-native-widget-image {
