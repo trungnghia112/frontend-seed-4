@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "gulp serve",
-    "prettier": "prettier ./**/*.{ts,json,md,scss} --write",
+    "prettier": "prettier ./**/*.{json,md,scss} --write",
     "clean": "gulp clean",
     "build": "npm run clean && npm run prettier && gulp build",
     "release": "standard-version -a",
@@ -49,11 +49,11 @@
     }
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/register": "^7.8.6",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
     "browser-sync": "^2.26.7",
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.4.0",
@@ -63,16 +63,16 @@
     "gulp-newer": "^1.4.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "prettier": "^1.19.1"
+    "prettier": "^2.0.5"
   },
   "dependencies": {
-    "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
-    "standard-version": "^7.1.0"
+    "standard-version": "^8.0.0"
   }
 }
