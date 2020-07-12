@@ -10345,6 +10345,198 @@ a.text-dark:hover, a.text-dark:focus {
   padding-left: 0px !important;
 }
 
+.bg-primary-o-50 {
+  background-color: rgba(0, 123, 255, 0.5);
+}
+
+.bg-primary-o-40 {
+  background-color: rgba(0, 123, 255, 0.4);
+}
+
+.bg-primary-o-30 {
+  background-color: rgba(0, 123, 255, 0.3);
+}
+
+.bg-primary-o-20 {
+  background-color: rgba(0, 123, 255, 0.2);
+}
+
+.bg-primary-o-10 {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.bg-primary-o-0 {
+  background-color: rgba(0, 123, 255, 0);
+}
+
+.bg-secondary-o-50 {
+  background-color: rgba(108, 117, 125, 0.5);
+}
+
+.bg-secondary-o-40 {
+  background-color: rgba(108, 117, 125, 0.4);
+}
+
+.bg-secondary-o-30 {
+  background-color: rgba(108, 117, 125, 0.3);
+}
+
+.bg-secondary-o-20 {
+  background-color: rgba(108, 117, 125, 0.2);
+}
+
+.bg-secondary-o-10 {
+  background-color: rgba(108, 117, 125, 0.1);
+}
+
+.bg-secondary-o-0 {
+  background-color: rgba(108, 117, 125, 0);
+}
+
+.bg-success-o-50 {
+  background-color: rgba(40, 167, 69, 0.5);
+}
+
+.bg-success-o-40 {
+  background-color: rgba(40, 167, 69, 0.4);
+}
+
+.bg-success-o-30 {
+  background-color: rgba(40, 167, 69, 0.3);
+}
+
+.bg-success-o-20 {
+  background-color: rgba(40, 167, 69, 0.2);
+}
+
+.bg-success-o-10 {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.bg-success-o-0 {
+  background-color: rgba(40, 167, 69, 0);
+}
+
+.bg-info-o-50 {
+  background-color: rgba(23, 162, 184, 0.5);
+}
+
+.bg-info-o-40 {
+  background-color: rgba(23, 162, 184, 0.4);
+}
+
+.bg-info-o-30 {
+  background-color: rgba(23, 162, 184, 0.3);
+}
+
+.bg-info-o-20 {
+  background-color: rgba(23, 162, 184, 0.2);
+}
+
+.bg-info-o-10 {
+  background-color: rgba(23, 162, 184, 0.1);
+}
+
+.bg-info-o-0 {
+  background-color: rgba(23, 162, 184, 0);
+}
+
+.bg-warning-o-50 {
+  background-color: rgba(255, 193, 7, 0.5);
+}
+
+.bg-warning-o-40 {
+  background-color: rgba(255, 193, 7, 0.4);
+}
+
+.bg-warning-o-30 {
+  background-color: rgba(255, 193, 7, 0.3);
+}
+
+.bg-warning-o-20 {
+  background-color: rgba(255, 193, 7, 0.2);
+}
+
+.bg-warning-o-10 {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.bg-warning-o-0 {
+  background-color: rgba(255, 193, 7, 0);
+}
+
+.bg-danger-o-50 {
+  background-color: rgba(220, 53, 69, 0.5);
+}
+
+.bg-danger-o-40 {
+  background-color: rgba(220, 53, 69, 0.4);
+}
+
+.bg-danger-o-30 {
+  background-color: rgba(220, 53, 69, 0.3);
+}
+
+.bg-danger-o-20 {
+  background-color: rgba(220, 53, 69, 0.2);
+}
+
+.bg-danger-o-10 {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.bg-danger-o-0 {
+  background-color: rgba(220, 53, 69, 0);
+}
+
+.bg-light-o-50 {
+  background-color: rgba(248, 249, 250, 0.5);
+}
+
+.bg-light-o-40 {
+  background-color: rgba(248, 249, 250, 0.4);
+}
+
+.bg-light-o-30 {
+  background-color: rgba(248, 249, 250, 0.3);
+}
+
+.bg-light-o-20 {
+  background-color: rgba(248, 249, 250, 0.2);
+}
+
+.bg-light-o-10 {
+  background-color: rgba(248, 249, 250, 0.1);
+}
+
+.bg-light-o-0 {
+  background-color: rgba(248, 249, 250, 0);
+}
+
+.bg-dark-o-50 {
+  background-color: rgba(52, 58, 64, 0.5);
+}
+
+.bg-dark-o-40 {
+  background-color: rgba(52, 58, 64, 0.4);
+}
+
+.bg-dark-o-30 {
+  background-color: rgba(52, 58, 64, 0.3);
+}
+
+.bg-dark-o-20 {
+  background-color: rgba(52, 58, 64, 0.2);
+}
+
+.bg-dark-o-10 {
+  background-color: rgba(52, 58, 64, 0.1);
+}
+
+.bg-dark-o-0 {
+  background-color: rgba(52, 58, 64, 0);
+}
+
 /* way the hell off screen */
 .scrollbar-measure {
   width: 100px;
