@@ -41,7 +41,7 @@ $prefix-for-spec: true !default;
 }
 
 //
-//Transform
+// Transform
 //
 @mixin transform($property: none) {
   // none | <transform-function>
@@ -60,7 +60,7 @@ $prefix-for-spec: true !default;
 }
 
 //
-//Set a pixel font size with rem fallback
+// Set a pixel font size with rem fallback
 //
 
 @function calculatePx($size) {
@@ -69,7 +69,7 @@ $prefix-for-spec: true !default;
 }
 
 //
-//Set a rem font size with pixel fallback
+// Set a rem font size with pixel fallback
 //
 
 @function calculateRem($size) {
@@ -82,12 +82,12 @@ $prefix-for-spec: true !default;
   font-size: calculateRem($size);
 }
 
-/*p {
-  @include font-size(14px)
-}*/
+//p {
+//  @include font-size(14px)
+//}
 
 //
-//SVG background images with PNG and retina fallback
+// SVG background images with PNG and retina fallback
 //
 $image-path: '../images' !default;
 $fallback-extension: 'png' !default;
@@ -106,12 +106,12 @@ $retina-suffix: '@2x';
   }
 }
 
-/*body {
-  @include background-image('pattern');
-}*/
+//body {
+//  @include background-image('pattern');
+//}
 
 //
-//Animations and keyframes
+// Animations and keyframes
 //
 
 @mixin keyframes($animation-name) {
@@ -140,21 +140,20 @@ $retina-suffix: '@2x';
   animation: #{$str};
 }
 
-/*
-@include keyframes(slide-down) {
-  0% { opacity: 1; }
-  90% { opacity: 0; }
-}
-
-.element {
-  width: 100px;
-  height: 100px;
-  background: black;
-  @include animation('slide-down 5s 3');
-}*/
+//@include keyframes(slide-down) {
+//  0% { opacity: 1; }
+//  90% { opacity: 0; }
+//}
+//
+//.element {
+//  width: 100px;
+//  height: 100px;
+//  background: black;
+//  @include animation('slide-down 5s 3');
+//}
 
 //
-//Cross browser opacity
+// Cross browser opacity
 //
 
 @mixin opacity($opacity) {
@@ -163,11 +162,9 @@ $retina-suffix: '@2x';
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
-/*
-.faded-text {
-  @include opacity(0.8);
-}
-*/
+//.faded-text {
+//  @include opacity(0.8);
+//}
 
 //
 // Centering Mixin
@@ -190,23 +187,23 @@ $retina-suffix: '@2x';
   }
 }
 
-/*.parent {
-  position: relative;
-}
-
-.child {
-  &.both {
-    @include center;
-  }
-
-  &.horizontal {
-    @include center(true, false);
-  }
-
-  &.vertical {
-    @include center(false, true);
-  }
-}*/
+//.parent {
+//  position: relative;
+//}
+//
+//.child {
+//  &.both {
+//    @include center;
+//  }
+//
+//  &.horizontal {
+//    @include center(true, false);
+//  }
+//
+//  &.vertical {
+//    @include center(false, true);
+//  }
+//}
 
 // --------------------------------------------------------
 // arrows
@@ -280,7 +277,7 @@ $retina-suffix: '@2x';
   white-space: normal;
 }
 
-@mixin overplay-item() {
+@mixin overlay-item() {
   content: '';
   position: absolute;
   @include gradient-y(transparent, #000);
