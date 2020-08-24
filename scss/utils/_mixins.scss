@@ -140,6 +140,21 @@ $retina-suffix: '@2x';
   animation: #{$str};
 }
 
+@mixin animation-delay($delay: 0s) {
+  @include prefixer(animation-delay, $delay, webkit moz ms o spec);
+}
+
+@mixin animation-name($name) {
+  @include prefixer(animation-name, $name, webkit moz ms o spec);
+}
+
+//
+// Perspective
+//
+@mixin perspective($property: none) {
+  @include prefixer(perspective, $property, webkit moz ms o spec);
+}
+
 //@include keyframes(slide-down) {
 //  0% { opacity: 1; }
 //  90% { opacity: 0; }
