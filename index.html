@@ -16,7 +16,7 @@
   <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="canonical" href="http://">
+  <link rel="canonical" href="https://nghiatran.net">
   <meta name="title" content="Frontend Seed 4 - Title">
   <meta name="referrer" content="unsafe-url">
   <meta name="description" content="Frontend Seed 4 - Description">
@@ -100,12 +100,21 @@
       animation-delay: 0.4s;
     }
   </style>
-  <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
+  <link rel='preload'
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        as='style'
+        onload="this.onload=null;this.rel='stylesheet'">
+  <link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
+  <link rel='preload' href='fonts/icomoon/style.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="dist/app.min.css">
-  </noscript>-->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="customs/style.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+  </noscript>
+  <!--  <link rel="stylesheet" href="css/style.css">-->
+  <!--  <link rel="stylesheet" href="css/mobile.css">-->
+  <!--  <link rel="stylesheet" href="customs/style.css">-->
 </head>
 
 <body>
@@ -118,19 +127,185 @@
 </div>
 <div class="wrapper" id="site_wrapper">
   <header class="header" id="header">
+    <div class="container">
+      <nav class="navbar">
+        <a class="navbar-brand" href="/">
+          <img src="images/logo.png" alt="Logo" loading="lazy">
+        </a>
+        <input type="checkbox" id="menu-toggle">
+        <label class="navbar-toggler" for="menu-toggle">
+          <span class="navbar-toggler-icon"></span>
+        </label>
+        <div class="navbar-collapse">
+          <ul class="navbar-nav">
+            <li><a href="#">Vlog</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Radio</a></li>
+            <li><a href="#">Nghĩa là ai?</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="main" id="main">
-    <h1>Hello world!</h1>
+    <section class="section-hero">
+      <div class="container">
+        <div class="section-content">
+          <div class="hero-images">
+            <img class="hero-img" src="images/avatar.jpg" alt="" loading="lazy">
+          </div>
+          <div class="hero-text">
+            <h2 class="h2"><span>Hi.</span> Tôi là Nghĩa Trần</h2>
+            <h3 class="hero-text-effect h3" data-delay="5000" data-words>
+              <span class="text-anim-str">Tôi là một</span>
+              <span class="text-anim-items">
+									<span class="text-anim-item"><span>blogger</span></span>
+									<span class="text-anim-item"><span>traveler</span></span>
+									<span class="text-anim-item"><span>writer</span></span>
+								</span>
+              <span class="anim-line"></span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-feature">
+      <div class="container">
+        <div class="section-content">
+          <div class="feature-row">
+            <div class="feature-col">
+              <div class="card">
+                <div class="card">
+                  <img
+                    src="https://scontent-sin6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/117184709_100812421730536_3238898803728909630_n.jpg?_nc_ht=scontent-sin6-1.cdninstagram.com&_nc_cat=104&_nc_ohc=UmpXsL7kO_UAX8p9Sc6&oh=68ba797d9d4dc0ea5d688bbe7568e1bf&oe=5F6D853A"
+                    class="card-img" alt="...">
+                  <a href="#" class="card-img-overlay">
+                    <h4 class="card-title">Vlog</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="feature-col">
+              <div class="card">
+                <div class="card bg-dark text-white">
+                  <img
+                    src="https://scontent-sin6-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c240.0.960.960a/s640x640/106374215_691608814734846_1008081941014276509_n.jpg?_nc_ht=scontent-sin6-1.cdninstagram.com&_nc_cat=106&_nc_ohc=Tpq7aeCbNSgAX-wCfn6&oh=b80f7abc8d47a75ac5c84fa28e99bb86&oe=5F6CB06E"
+                    class="card-img" alt="...">
+                  <a href="#" class="card-img-overlay">
+                    <h4 class="card-title">Blog</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="feature-col">
+              <div class="card">
+                <div class="card bg-dark text-white">
+                  <img
+                    src="https://instagram.fvca1-2.fna.fbcdn.net/v/t51.2885-15/e35/c175.0.450.450a/18513731_914424245367517_2129160905198403584_n.jpg?_nc_ht=instagram.fvca1-2.fna.fbcdn.net&_nc_cat=101&_nc_ohc=0FxLQmcNiyQAX9KA9dV&oh=7cd5cb42f45fcf8c1cc70e6abf64fe54&oe=5F6C2E0C"
+                    class="card-img" alt="...">
+                  <a href="#" class="card-img-overlay">
+                    <h4 class="card-title">Radio</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-latest-blog">
+      <div class="container">
+        <div class="section-content">
+          <h3 class="h3">LATEST FROM THE BLOG</h3>
+          <ul class="list-news">
+            <li>
+              <div class="list-news-img">
+                <span class="day">01</span>
+                <span class="month">May</span>
+                <img
+                  src="https://instagram.fvca1-2.fna.fbcdn.net/v/t51.2885-15/e35/s150x150/80481663_151961572768944_1089856942081291651_n.jpg?_nc_ht=instagram.fvca1-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=w6QGT_YYaNQAX8HRrYL&oh=f2516c54739b8812a65c03ceac43a611&oe=5F6E6755"
+                  alt="" loading="lazy">
+              </div>
+              <a href="#" class="list-news-body">
+                Gathering with old friends
+              </a>
+            </li>
+            <li>
+              <div class="list-news-img">
+                <span class="day">01</span>
+                <span class="month">May</span>
+                <img
+                  src="https://instagram.fvca1-2.fna.fbcdn.net/v/t51.2885-15/e35/s150x150/80481663_151961572768944_1089856942081291651_n.jpg?_nc_ht=instagram.fvca1-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=w6QGT_YYaNQAX8HRrYL&oh=f2516c54739b8812a65c03ceac43a611&oe=5F6E6755"
+                  alt="" loading="lazy">
+              </div>
+              <a href="#" class="list-news-body">
+                Gathering with old friends
+              </a>
+            </li>
+            <li>
+              <div class="list-news-img">
+                <span class="day">01</span>
+                <span class="month">May</span>
+                <img
+                  src="https://instagram.fvca1-2.fna.fbcdn.net/v/t51.2885-15/e35/s150x150/80481663_151961572768944_1089856942081291651_n.jpg?_nc_ht=instagram.fvca1-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=w6QGT_YYaNQAX8HRrYL&oh=f2516c54739b8812a65c03ceac43a611&oe=5F6E6755"
+                  alt="" loading="lazy">
+              </div>
+              <a href="#" class="list-news-body">
+                Gathering with old friends
+              </a>
+            </li>
+            <li>
+              <div class="list-news-img">
+                <span class="day">01</span>
+                <span class="month">May</span>
+                <img
+                  src="https://instagram.fvca1-2.fna.fbcdn.net/v/t51.2885-15/e35/s150x150/80481663_151961572768944_1089856942081291651_n.jpg?_nc_ht=instagram.fvca1-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=w6QGT_YYaNQAX8HRrYL&oh=f2516c54739b8812a65c03ceac43a611&oe=5F6E6755"
+                  alt="" loading="lazy">
+              </div>
+              <a href="#" class="list-news-body">
+                Gathering with old friends
+              </a>
+            </li>
+            <li>
+              <div class="list-news-img">
+                <span class="day">01</span>
+                <span class="month">May</span>
+                <img
+                  src="https://instagram.fvca1-2.fna.fbcdn.net/v/t51.2885-15/e35/s150x150/80481663_151961572768944_1089856942081291651_n.jpg?_nc_ht=instagram.fvca1-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=w6QGT_YYaNQAX8HRrYL&oh=f2516c54739b8812a65c03ceac43a611&oe=5F6E6755"
+                  alt="" loading="lazy">
+              </div>
+              <a href="#" class="list-news-body">
+                Gathering with old friends
+              </a>
+            </li>
+          </ul>
+          <div class="view-more">
+            <a href="#" class="btn btn-outline-secondary">See All Posts</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="/"><img src="images/logo.png" alt="Logo" loading="lazy"></a>
+        <span>just living the life as it goes by</span>
+      </div>
+      <div class="footer-social">
+        <div class="social-list hi-icon-effect-3 hi-icon-effect-3b">
+          <a class="hi-icon icon-facebook" href="https://facebook.com">Facebook</a>
+          <a class="hi-icon icon-instagram" href="https://facebook.com">instagram</a>
+          <a class="hi-icon icon-youtube-play" href="https://facebook.com">youtube</a>
+        </div>
+      </div>
+    </div>
   </footer>
 </div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 <!-- Core JavaScript -->
 <!--<script src="dist/core.min.js"></script>-->
@@ -138,8 +313,7 @@
 <!-- End Core JavaScript -->
 
 <!-- JavaScript -->
-<!--<script src="dist/app.min.js"></script>-->
-<script src="js/common.js"></script>
+<script src="dist/app.min.js"></script>
 <script src="customs/script.js"></script>
 <!-- End JavaScript -->
 </body>

@@ -1,5 +1,6 @@
 // Variables
 // Color system
+$secondary: #212933;
 // Options
 // Spacing
 // Body
@@ -9,15 +10,37 @@
 // Grid containers
 // Grid columns
 // Components
+$border-color: #f1f1f1;
+$border-radius: 0px;
+$border-radius-lg: 0px;
+$border-radius-sm: 0px;
 // Fonts
+$font-weight-base: 400;
+$font-family-base: 'Raleway', sans-serif;
+$headings-font-family: 'Raleway', sans-serif;
+//$headings-font-weight: 900;
 // Tables
 // Buttons + Forms
+//$input-btn-font-size: 10px;
 // Buttons
+$btn-border-width: 2px;
+$btn-font-size: calculateRem(10px);
+$btn-padding-y: calculateRem(12px);
+$btn-padding-x: calculateRem(24px);
+//$btn-font-size-sm: 9px;
+//$btn-font-size-lg: 12px;
 // Forms
+$input-font-size: calculateRem(13px);
+$input-padding-y: calculateRem(10.75px);
+//$input-font-size-sm: 10px;
+//$input-font-size-lg: 16px;
 // Dropdowns
 // Z-index master list
 // Navs
 // Navbar
+$navbar-light-color: #666666;
+$navbar-light-hover-color: #000;
+$navbar-light-active-color: #000;
 // Pagination
 // Jumbotron
 // Cards

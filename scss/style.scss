@@ -29,13 +29,14 @@
 // --------------------------------------------------
 @import 'partials/fonts';
 @import 'partials/icons';
-@import 'partials/scrollbar-measure';
+//@import 'partials/scrollbar-measure';
 //
 // =Modules
 // --------------------------------------------------
 //@import "modules/facebook-responsive";
-//@import 'modules/iconHoverEffects/iconHoverEffects';
+@import 'modules/iconHoverEffects/iconHoverEffects';
 //@import 'modules/creativeLinkEffects/creativeLinkEffects';
+@import 'modules/rotating-words/rotate-words';
 @import 'modules/list';
 //
 // =Layout

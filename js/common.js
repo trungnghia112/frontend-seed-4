@@ -4,80 +4,69 @@
  Author:     trungnghia112 <trungnghia112@gmail.com>
 
  -----------------------------------------------------------------------------------*/
+/* ==================================================
+  // Rotating Words
+  ===================================================*/
+document.addEventListener('DOMContentLoaded', initTextAnimSlider);
 
-if (Modernizr.touch === true && $(window).width() <= 767) {
-  //alert('Touch Screen');
-} else {
+function initTextAnimSlider() {
+  var textAnimHolder = document.querySelector('[data-words]');
+  var textAnimItem = document.querySelectorAll('.text-anim-item');
+  var textAnimItems = document.querySelector('.text-anim-items');
+  var animLine = document.querySelector('.anim-line');
+  var animIn = 'anim-in';
+  var animOut = 'anim-out';
+  var lineActiveClass = 'line-active';
+  var animNextItem = null;
+  var animPrevItem = null;
+  var animFirstLoad = false;
+  var animDuration = textAnimHolder.getAttribute('data-delay');
+  var animCounter = 0;
+  var setTimeAnim;
+  var setTimeAnimResize;
+  animFunc();
+  getHolderWidth();
 
+  function animFunc() {
+    clearTimeout(setTimeAnim);
+    setTimeAnim = setTimeout(function() {
+      animFirstLoad = true;
+      if (animPrevItem !== null) {
+        animPrevItem.classList.add(animOut);
+      }
+      animNextItem = textAnimItems.children[animCounter];
+      animNextItem.classList.remove(animOut);
+      animNextItem.classList.add(animIn);
+      animLine.style.width = animNextItem.clientWidth + 'px';
+      animLine.classList.add(lineActiveClass);
+      animPrevItem = animNextItem;
+      if (animCounter === textAnimItem.length - 1) {
+        animCounter = 0;
+      } else {
+        animCounter++;
+      }
+      animFunc();
+    }, animFirstLoad ? animDuration : 100);
+  }
+
+  function getHolderWidth() {
+    var itemsWidth = [];
+    for (var i = 0; i < textAnimItem.length; i++) {
+      itemsWidth.push(textAnimItem[i].clientWidth);
+      // console.log(textAnimItem[i].clientWidth);
+    }
+    textAnimHolder.style.width = 'auto';
+  }
+
+  function resizeHandler() {
+    clearTimeout(setTimeAnim);
+    clearTimeout(setTimeAnimResize);
+    getHolderWidth();
+    setTimeAnimResize = setTimeout(function() {
+      animFunc();
+    }, 50);
+  }
+
+  window.addEventListener('resize', resizeHandler);
+  window.addEventListener('orientationchange', resizeHandler);
 }
-
-(function ($) {
-  'use strict';
-
-
-  /* ==================================================
-  # Get scroll bar width
-  ===================================================*/
-  function getBarwidth() {
-    // Create the measurement node
-    let scrollDiv = document.createElement('div');
-    scrollDiv.className = 'scrollbar-measure';
-    document.body.appendChild(scrollDiv);
-
-    // Get the scrollbar width
-    let scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
-    //console.warn(scrollbarWidth); // Mac:  15
-
-    // Delete the DIV
-    document.body.removeChild(scrollDiv);
-    return scrollbarWidth;
-  }
-
-  /* ==================================================
-  # Smooth Scroll
-  ===================================================*/
-  function scrollToAnchor() {
-    $('.js-scroll-to').on('click', function (event) {
-      let $anchor = $(this);
-      let headerH = '0';
-      $('html, body')
-        .stop()
-        .animate(
-          {
-            scrollTop: $($anchor.attr('href')).offset().top - headerH + 'px'
-          },
-          1000
-        );
-      event.preventDefault();
-    });
-  }
-
-  function init() {
-    scrollToAnchor();
-    getBarwidth();
-  }
-
-  $(document).ready(function () {
-    init();
-  }); // end document ready function
-
-  $(window).on('scroll', function () {
-  });
-
-  // if ($('.x-toTop').length) {
-  //   let scrollTrigger = 100, // px
-  //     backToTop = function () {
-  //       let scrollTop = $(window).scrollTop();
-  //       if (scrollTop > scrollTrigger) {
-  //         $('.x-toTop').addClass('active');
-  //       } else {
-  //         $('.x-toTop').removeClass('active');
-  //       }
-  //     };
-  //   backToTop();
-  //   $(window).on('scroll', function () {
-  //     backToTop();
-  //   });
-  // }
-
-})(jQuery); // End jQuery
