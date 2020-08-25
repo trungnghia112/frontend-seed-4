@@ -46,7 +46,7 @@ Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/fron
 
 - Simple, intuitive, clean code.
 
-- **Bootstrap ^4.5.0**
+- **Bootstrap ^4.5.2**
 
 - **Popper ^1.16.1**(Because Bootstrap popovers and tooltips need it)
 
@@ -56,7 +56,7 @@ Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/fron
 
 - **Font Awesome 5.12.1**
 
-- **Prettier 2.0.5** (Opinionated Code Formatter).
+- **Prettier ^2.0.5** (Opinionated Code Formatter).
 
 ## Buy me a beer
 

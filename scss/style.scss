@@ -19,7 +19,7 @@
 //
 // =Bootstrap
 // --------------------------------------------------
-//@import 'custom-bootstrap';
+@import 'custom-bootstrap';
 @import 'bootstrap/bootstrap';
 //
 // =Third parties
@@ -34,7 +34,8 @@
 // =Modules
 // --------------------------------------------------
 //@import "modules/facebook-responsive";
-//@import "modules/IconHoverEffects";
+//@import 'modules/iconHoverEffects/iconHoverEffects';
+//@import 'modules/creativeLinkEffects/creativeLinkEffects';
 @import 'modules/list';
 //
 // =Layout
