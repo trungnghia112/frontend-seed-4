@@ -13,3 +13,9 @@ Content
   text-align: center;
   margin: 30px 0;
 }
+
+.main-aside {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}

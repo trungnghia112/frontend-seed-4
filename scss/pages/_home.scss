@@ -55,36 +55,6 @@
 
 .section-feature {
   margin-bottom: 30px;
-
-  .card {
-    position: relative;
-    margin-bottom: $grid-gutter-width;
-  }
-
-  .card-img {
-    width: 100%;
-    height: auto;
-  }
-
-  .card-img-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(#000, 0.3);
-    @include flexbox;
-    @include justify-content(center);
-    @include align-items(center);
-    @include hover-focus {
-      text-decoration: none;
-    }
-  }
-
-  .card-title {
-    font-size: 40px;
-    color: #ffffff;
-  }
 }
 
 

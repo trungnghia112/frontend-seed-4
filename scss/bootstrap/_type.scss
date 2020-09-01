@@ -3,6 +3,10 @@
   min-width: 0; /* Rendering problems using flexbox in Firefox and Chrome 48 */
 }
 
+a {
+  text-decoration: none;
+}
+
 //.img-full {
 //  width: 100%;
 //  height: auto;
