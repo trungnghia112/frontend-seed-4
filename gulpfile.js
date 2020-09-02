@@ -85,6 +85,21 @@ function stylesMin() {
     .pipe(gulp.dest(paths.stylesMin.dest))
     .pipe(browserSync.stream())
 }
+function stylesDesktopMin() {
+  return gulp
+    .src('scss/desktop.scss')
+    .pipe(sass({ outputStyle: 'compressed' }))
+    // .pipe(cleanCSS()) // pass in options to the stream
+    .pipe(
+      rename({
+        basename: 'desktop',
+        suffix: '.min'
+      })
+    )
+    .pipe(size())
+    .pipe(gulp.dest(paths.stylesMin.dest))
+    .pipe(browserSync.stream())
+}
 
 function scripts() {
   return gulp
@@ -152,6 +167,7 @@ function watch() {
 exports.clean = clean
 exports.styles = styles
 exports.stylesMin = stylesMin
+exports.stylesDesktopMin = stylesDesktopMin
 exports.scripts = scripts
 exports.scriptsCore = scriptsCore
 exports.images = images
@@ -163,7 +179,7 @@ exports.serve = serve
  */
 const build = gulp.series(
   clean,
-  gulp.parallel(styles, stylesMin, scripts, scriptsCore, images)
+  gulp.parallel(styles, stylesMin, stylesDesktopMin, scripts, scriptsCore, images)
 )
 
 /*

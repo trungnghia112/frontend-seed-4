@@ -44,9 +44,47 @@
   z-index: 3;
 }
 
-.card-description {
+.card-info {
   font-size: 12px;
   color: #6c757d;
+}
+
+.card-img-link {
+  position: relative;
+}
+
+.card-img-link:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #000000;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-img-link:after {
+    transition: none;
+  }
+}
+
+.card-img-link:hover:after, .card-img-link:focus:after {
+  opacity: 0.1;
+}
+
+.card-entry .card-body {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 30px;
+  margin-top: -45px;
+}
+
+.card-entry .card-title {
+  font-size: 24px;
 }
 
 .list-posts > li {
@@ -93,7 +131,7 @@
 
 .navbar-brand img {
   height: 56px;
-  margin-bottom: -30px;
+  margin-bottom: -22px;
 }
 
 .section-content {

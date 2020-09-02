@@ -9,6 +9,26 @@
   display: block;
 }
 
+.card-img-link {
+  display: block;
+}
+
+.card-info {
+  font-size: 12px;
+  .btn-tag {
+    margin-right: 10px;
+  }
+
+  time {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
 .card-img-overlay {
   position: absolute;
   top: 0;
@@ -26,5 +46,25 @@
     color: #ffffff;
     margin: 0;
   }
+}
 
+.card-entry {
+  .card-body {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 15px;
+    background-color: #ffffff;
+    margin-top: -30px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .card-title {
+    position: relative;
+    font-size: 18px;
+  }
+
+  .card-info {
+    margin-bottom: 10px;
+  }
 }

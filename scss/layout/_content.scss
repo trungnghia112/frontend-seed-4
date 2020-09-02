@@ -14,6 +14,14 @@ Content
   margin: 30px 0;
 }
 
+.see-more {
+  color: inherit;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border: 1px solid $border-color;
+}
+
 .main-aside {
   @include media-breakpoint-down(md) {
     display: none;

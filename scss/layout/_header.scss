@@ -16,6 +16,7 @@ Header
 
 .navbar-brand {
   margin-right: auto;
+  @include flexbox;
   @include media-breakpoint-down(md) {
     img {
       height: 32px;
