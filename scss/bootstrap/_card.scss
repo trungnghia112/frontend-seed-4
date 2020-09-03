@@ -13,9 +13,37 @@
   display: block;
 }
 
+.card-title {
+  font-size: 14px;
+  margin: 10px 0 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+    }
+  }
+}
+
 .card-info {
   font-size: 12px;
-  .btn-tag {
+  color: $text-muted;
+}
+
+.card-info {
+  font-size: 12px;
+  @include flexbox;
+  @include flex-wrap(wrap);
+
+  .btn-cat {
     margin-right: 10px;
   }
 
@@ -66,5 +94,47 @@
 
   .card-info {
     margin-bottom: 10px;
+  }
+}
+
+.card-list {
+  .card {
+    @include flexbox;
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .card-img-link {
+    margin-right: 20px;
+    width: 120px;
+  }
+
+  .card-body {
+    @include flex(1);
+  }
+
+  .card-title {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .card-info {
+    margin-bottom: 10px;
+  }
+
+  @include media-breakpoint-down(md) {
+    .card-info {
+      margin-bottom: 0;
+    }
+    .card-description,
+    .see-more,
+    .card-info a:not(.btn-cat) {
+      display: none;
+    }
   }
 }
