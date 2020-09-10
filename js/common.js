@@ -4,11 +4,36 @@
  Author:     trungnghia112 <trungnghia112@gmail.com>
 
  -----------------------------------------------------------------------------------*/
+/**
+ *
+ <picture>
+   <source data-srcset="dummy/1.webp" type="image/webp"/>
+   <source data-srcset="dummy/1.jpg"/>
+   <img loading="lazy" class="lazyload card-img-top" src="images/img-size/news.png" data-src="dummy/1.jpg" alt="Image description"/>
+ </picture>
+ */
+// function lazyLoading() {
+//   if ('loading' in HTMLImageElement.prototype) {
+//     // var images = document.querySelectorAll('img[loading="lazy"]');
+//     var images = document.querySelectorAll('.lazyload');
+//     var sources = document.querySelectorAll('source[data-srcset]');
+//     sources.forEach(function(source) {
+//       source.srcset = source.dataset.srcset;
+//     });
+//     images.forEach(function(img) {
+//       img.src = img.dataset.src;
+//     });
+//   } else {
+//     var script = document.createElement('script');
+//     script.src = '/third_party/vanilla-lazyload/dist/lazyload.min.js';
+//     document.body.appendChild(script);
+//   }
+// }
+
+
 /* ==================================================
   // Rotating Words
   ===================================================*/
-document.addEventListener('DOMContentLoaded', initTextAnimSlider);
-
 function initTextAnimSlider() {
   var textAnimHolder = document.querySelector('[data-words]');
   if (textAnimHolder) {
@@ -76,3 +101,8 @@ function initTextAnimSlider() {
     window.addEventListener('orientationchange', resizeHandler);
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  // lazyLoading();
+  initTextAnimSlider();
+});
