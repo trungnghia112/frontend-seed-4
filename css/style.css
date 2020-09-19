@@ -9733,6 +9733,11 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 10px;
 }
 
+.form-control {
+  line-height: 20px;
+  font: 16px/20px;
+}
+
 .custom-select {
   -webkit-appearance: none;
   appearance: none;
