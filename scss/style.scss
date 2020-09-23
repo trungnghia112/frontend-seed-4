@@ -1,5 +1,11 @@
 @import 'core';
 
+.device-view-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 .right-native-widget-wrap {
   font-family: 'Open Sans', 'Arial', sans-serif;
 
@@ -36,7 +42,6 @@
 .right-native-widget-bar {
   clear: both;
   overflow: hidden;
-  margin-bottom: 5px;
   color: #646c9a;
 
   .right-native-widget-pos-left {
@@ -56,6 +61,7 @@
 
 .right-native-widget-header-title {
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .right-native-widget-header-brand {
@@ -125,10 +131,10 @@
     &:after {
       transform: translateX(-100%);
       background-image: linear-gradient(
-        90deg,
-        transparent,
-        rgba(#999999, 0.3),
-        transparent
+          90deg,
+          transparent,
+          rgba(#999999, 0.3),
+          transparent
       );
       animation: right-native-widget-loading 1.5s infinite;
     }
@@ -248,6 +254,10 @@
             position: relative !important;
           }
         }
+
+        .right-native-widget-title {
+          @include flex(1);
+        }
       }
     }
 
@@ -348,11 +358,11 @@
       padding: 50px 20px 15px;
       overflow: hidden;
       background-image: linear-gradient(
-        to bottom,
-        transparent,
-        rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
-        rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
-        rgba(var(--rightNativeBlurBgGradient), 1) 45%
+          to bottom,
+          transparent,
+          rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
+          rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
+          rgba(var(--rightNativeBlurBgGradient), 1) 45%
       );
     }
 
@@ -377,11 +387,11 @@
         text-align: right;
 
         background-image: linear-gradient(
-          to right,
-          transparent,
-          rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
-          rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
-          rgba(var(--rightNativeBlurBgGradient), 1) 45%
+            to right,
+            transparent,
+            rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
+            rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
+            rgba(var(--rightNativeBlurBgGradient), 1) 45%
         );
       }
 
@@ -406,11 +416,11 @@
           text-align: left;
 
           background-image: linear-gradient(
-            to left,
-            transparent,
-            rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
-            rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
-            rgba(var(--rightNativeBlurBgGradient), 1) 45%
+              to left,
+              transparent,
+              rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
+              rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
+              rgba(var(--rightNativeBlurBgGradient), 1) 45%
           );
         }
 
@@ -423,6 +433,15 @@
 }
 
 @mixin widgetBlurOnMobile() {
+  .right-native-widget-body-content {
+    display: block;
+
+    .right-native-widget-video-wrapper {
+      margin-top: 10px;
+      width: 100% !important;
+    }
+  }
+
   .right-native-widget-image-blur {
     .right-native-widget-row-1 {
       .right-native-widget-image {
@@ -435,17 +454,18 @@
         left: 0;
         padding: 50px 20px 15px;
         background-image: linear-gradient(
-          to bottom,
-          transparent,
-          rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
-          rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
-          rgba(var(--rightNativeBlurBgGradient), 1) 45%
+            to bottom,
+            transparent,
+            rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
+            rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
+            rgba(var(--rightNativeBlurBgGradient), 1) 45%
         );
       }
 
       .right-native-widget-description {
         display: none;
       }
+
       .right-native-widget-title {
         font-size: 20px;
         text-align: left;
