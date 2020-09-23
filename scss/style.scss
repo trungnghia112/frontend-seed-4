@@ -131,10 +131,10 @@
     &:after {
       transform: translateX(-100%);
       background-image: linear-gradient(
-          90deg,
-          transparent,
-          rgba(#999999, 0.3),
-          transparent
+        90deg,
+        transparent,
+        rgba(#999999, 0.3),
+        transparent
       );
       animation: right-native-widget-loading 1.5s infinite;
     }
@@ -358,11 +358,11 @@
       padding: 50px 20px 15px;
       overflow: hidden;
       background-image: linear-gradient(
-          to bottom,
-          transparent,
-          rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
-          rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
-          rgba(var(--rightNativeBlurBgGradient), 1) 45%
+        to bottom,
+        transparent,
+        rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
+        rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
+        rgba(var(--rightNativeBlurBgGradient), 1) 45%
       );
     }
 
@@ -387,11 +387,11 @@
         text-align: right;
 
         background-image: linear-gradient(
-            to right,
-            transparent,
-            rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
-            rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
-            rgba(var(--rightNativeBlurBgGradient), 1) 45%
+          to right,
+          transparent,
+          rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
+          rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
+          rgba(var(--rightNativeBlurBgGradient), 1) 45%
         );
       }
 
@@ -416,11 +416,11 @@
           text-align: left;
 
           background-image: linear-gradient(
-              to left,
-              transparent,
-              rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
-              rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
-              rgba(var(--rightNativeBlurBgGradient), 1) 45%
+            to left,
+            transparent,
+            rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
+            rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
+            rgba(var(--rightNativeBlurBgGradient), 1) 45%
           );
         }
 
@@ -437,7 +437,7 @@
     display: block;
 
     .right-native-widget-video-wrapper {
-      margin-top: 10px;
+      margin: 10px 0 !important;
       width: 100% !important;
     }
   }
@@ -454,11 +454,11 @@
         left: 0;
         padding: 50px 20px 15px;
         background-image: linear-gradient(
-            to bottom,
-            transparent,
-            rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
-            rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
-            rgba(var(--rightNativeBlurBgGradient), 1) 45%
+          to bottom,
+          transparent,
+          rgba(var(--rightNativeBlurBgGradient), 0.25) 15%,
+          rgba(var(--rightNativeBlurBgGradient), 0.85) 30%,
+          rgba(var(--rightNativeBlurBgGradient), 1) 45%
         );
       }
 
