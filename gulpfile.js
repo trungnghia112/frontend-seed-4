@@ -12,7 +12,7 @@ const gulpClean = require('gulp-clean')
 const plumber = require('gulp-plumber')
 const browserSync = require('browser-sync').create()
 const size = require('gulp-size')
-
+const purgecss = require('gulp-purgecss')
 
 const paths = {
   html: {
@@ -86,6 +86,15 @@ function stylesMin() {
     .pipe(browserSync.stream())
 }
 
+function unusedCSS() {
+  return gulp
+    .src('dist/**/*.css')
+    .pipe(purgecss({
+      content: ['./*.html']
+    }))
+    .pipe(gulp.dest('dist'))
+}
+
 function scripts() {
   return gulp
     .src(paths.scripts.src, { sourcemaps: true })
@@ -152,6 +161,7 @@ function watch() {
 exports.clean = clean
 exports.styles = styles
 exports.stylesMin = stylesMin
+exports.unusedCSS = unusedCSS
 exports.scripts = scripts
 exports.scriptsCore = scriptsCore
 exports.images = images
@@ -163,7 +173,8 @@ exports.serve = serve
  */
 const build = gulp.series(
   clean,
-  gulp.parallel(styles, stylesMin, scripts, scriptsCore, images)
+  gulp.parallel(styles, stylesMin, scripts, scriptsCore, images),
+  unusedCSS
 )
 
 /*
