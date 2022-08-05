@@ -2,6 +2,9 @@
 
 This template features predefined file paths for Bootstrap 4 and jQuery, so you can quickly create Bootstrap websites.
 
+## Frontend Seed 5
+View the next version, check out [https://github.com/trungnghia112/frontend-seed-5](https://github.com/trungnghia112/frontend-seed-5)
+
 ## Status
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/trungnghia112/frontend-seed-4/master/LICENSE)
